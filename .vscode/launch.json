@@ -8,8 +8,7 @@
             "type": "pwa-chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "file:///D:/angular-sandbox/apps/mod-05 (classes)/index.html",
-            // "webRoot": "${workspaceFolder}/apps/mod2"
+            "url": "file:///D:/angular-sandbox/apps/mod-07 (generics)/index.html",
         }
     ]
 }
