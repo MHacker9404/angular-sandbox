@@ -134,18 +134,44 @@ interface ValidatorConfig {
 const registeredValidators: ValidatorConfig = {};
 function Required(target: any, propName: string) {
   registeredValidators[target.constructor.name] = {
-    [propName]: ['required']
+    ...registeredValidators[target.constructor.name],
+    [propName]: [
+      ...registeredValidators[target.constructor.name][propName],
+      'required',
+    ],
   };
 }
 function PositiveNumber(target: any, propName: string) {
   registeredValidators[target.constructor.name] = {
-    [propName]: ['positive']
+    ...registeredValidators[target.constructor.name],
+    [propName]: [
+      ...registeredValidators[target.constructor.name][propName],
+      'positive',
+    ],
   };
 }
-function validate(obj: object): boolean {
+function validate(obj: any): boolean {
   let result = true;
+  const validatorConfig = registeredValidators[obj.constructor.name];
+  if (!validatorConfig) {
+    return result;
+  }
+  for (const prop in validatorConfig) {
+    for (const validator of validatorConfig[prop]) {
+      switch (validator) {
+        case 'required':
+          result = result && !!obj[prop];
+          break;
+        case 'positive':
+          result = result && obj[prop] > 0;
+          break;
+      }
+      if (!result) return result;
+    }
+  }
   return result;
 }
+
 class Course {
   @Required title: string;
   @Required price: number;
