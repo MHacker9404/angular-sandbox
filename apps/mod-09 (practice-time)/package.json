@@ -1,0 +1,6 @@
+{
+  "name": "course-starting-project",
+  "packageManager": "yarn@3.2.0",
+  "scripts": { },
+  "devDependencies": { }
+}
