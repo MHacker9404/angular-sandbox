@@ -2,6 +2,7 @@ enum ProjectStatus {
     ACTIVE,
     FINISHED,
 }
+
 class Project {
     constructor(
         public id: string,
@@ -143,7 +144,22 @@ abstract class ComponentBaseClass<
         );
 }
 
-class ProjectItem extends ComponentBaseClass<HTMLLIElement, HTMLUListElement> {
+//  drag and drop interfaces
+interface Draggable {
+    dragStartHandler: (event:DragEvent) => void;
+    dragEndHandler: (event: DragEvent) => void;
+ }
+
+interface DropTarget {
+    //  permit drop
+    dragOverHandler: (event:DragEvent) => void;
+    //  handle drop
+    dropHandler: (event:DragEvent) => void;
+    //  visual feedback
+    dragLeaveHandler: (event:DragEvent) => void;
+}
+
+class ProjectItem extends ComponentBaseClass<HTMLLIElement, HTMLUListElement> implements Draggable {
     constructor(hostId:string, private _project: Project){
         super('single-project', hostId, false, _project.id);
 
@@ -151,12 +167,33 @@ class ProjectItem extends ComponentBaseClass<HTMLLIElement, HTMLUListElement> {
         this._renderContent();
     }
 
-    protected override _configure = () => { };
+    get people (): string {
+        if (this._project.people === 1) {
+            return '1 person';
+        }
+        else return `${this._project.people} people`
+     };
+
+    protected override _configure = () => {
+        this._element.setAttribute('draggable', 'true');
+
+        this._element.addEventListener('dragstart', this.dragStartHandler);
+        this._element.addEventListener('dragend', this.dragEndHandler);
+     };
+
     protected override _renderContent = () => {
         this._element.querySelector('h2')!.textContent = this._project.title;
-        this._element.querySelector('h3')!.textContent = this._project.people.toString();
+        this._element.querySelector('h3')!.textContent = this.people;
         this._element.querySelector('p')!.textContent = this._project.description;
      };
+
+    dragStartHandler = (event: DragEvent) => {
+        console.info(event);
+    };
+
+    dragEndHandler = (_: DragEvent) => {
+        console.info(`drag end`);
+    };
 }
 
 class ProjectList extends ComponentBaseClass<HTMLElement, HTMLDivElement> {
