@@ -8,7 +8,7 @@
             "type": "pwa-chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "file:///D:/angular-sandbox/apps/mod-12 (third-party)/index.html",
+            "url": "http://localhost:3000"
         }
     ]
 }
