@@ -65,6 +65,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@nxtend/capacitor", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:13.0.0"],\
             ["@nxtend/ionic-angular", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:13.1.0"],\
             ["@nxtend/ionic-react", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:13.0.0"],\
+            ["@swc/cli", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:0.1.57"],\
             ["@swc/core", "npm:1.2.162"],\
             ["@testing-library/react", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:12.1.4"],\
             ["@testing-library/react-hooks", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:7.0.2"],\
@@ -7520,6 +7521,36 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@swc-node/sourcemap-support", "npm:0.1.11"],\
             ["source-map-support", "npm:0.5.21"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@swc/cli", [\
+        ["npm:0.1.57", {\
+          "packageLocation": "./.yarn/cache/@swc-cli-npm-0.1.57-161586148e-d19f02233f.zip/node_modules/@swc/cli/",\
+          "packageDependencies": [\
+            ["@swc/cli", "npm:0.1.57"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:0.1.57", {\
+          "packageLocation": "./.yarn/__virtual__/@swc-cli-virtual-98ed88c111/0/cache/@swc-cli-npm-0.1.57-161586148e-d19f02233f.zip/node_modules/@swc/cli/",\
+          "packageDependencies": [\
+            ["@swc/cli", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:0.1.57"],\
+            ["@swc/core", "npm:1.2.162"],\
+            ["@types/chokidar", null],\
+            ["@types/swc__core", null],\
+            ["chokidar", null],\
+            ["commander", "npm:7.2.0"],\
+            ["fast-glob", "npm:3.2.11"],\
+            ["slash", "npm:3.0.0"],\
+            ["source-map", "npm:0.7.3"]\
+          ],\
+          "packagePeers": [\
+            "@swc/core",\
+            "@types/chokidar",\
+            "@types/swc__core",\
+            "chokidar"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -20611,6 +20642,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@nxtend/capacitor", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:13.0.0"],\
             ["@nxtend/ionic-angular", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:13.1.0"],\
             ["@nxtend/ionic-react", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:13.0.0"],\
+            ["@swc/cli", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:0.1.57"],\
             ["@swc/core", "npm:1.2.162"],\
             ["@testing-library/react", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:12.1.4"],\
             ["@testing-library/react-hooks", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:7.0.2"],\

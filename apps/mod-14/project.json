@@ -6,7 +6,7 @@
     "build": {
       "executor": "@nrwl/web:webpack",
       "outputs": ["{options.outputPath}"],
-      "defaultConfiguration": "production",
+      "defaultConfiguration": "development",
       "options": {
         "compiler": "swc",
         "outputPath": "dist/apps/mod-14",
@@ -21,6 +21,14 @@
         "webpackConfig": "@nrwl/react/plugins/webpack"
       },
       "configurations": {
+        "development": {
+          "optimization": false,
+          "outputHashing": "all",
+          "sourceMap": true,
+          "namedChunks": false,
+          "extractLicenses": false,
+          "vendorChunk": false
+        },
         "production": {
           "fileReplacements": [
             {
@@ -40,10 +48,15 @@
     "serve": {
       "executor": "@nrwl/web:dev-server",
       "options": {
-        "buildTarget": "mod-14:build",
+        "buildTarget": "mod-14:build:development",
         "hmr": true
       },
       "configurations": {
+        "development": {
+          "buildTarget": "mod-14:build:development",
+          "allowedHosts":["http://localhost", "http://0.0.0.0"],
+          "hmr": true
+        },
         "production": {
           "buildTarget": "mod-14:build:production",
           "hmr": false
