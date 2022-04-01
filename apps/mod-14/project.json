@@ -1,0 +1,62 @@
+{
+  "root": "apps/mod-14",
+  "sourceRoot": "apps/mod-14/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "swc",
+        "outputPath": "dist/apps/mod-14",
+        "index": "apps/mod-14/src/index.html",
+        "baseHref": "/",
+        "main": "apps/mod-14/src/main.tsx",
+        "polyfills": "apps/mod-14/src/polyfills.ts",
+        "tsConfig": "apps/mod-14/tsconfig.app.json",
+        "assets": ["apps/mod-14/src/favicon.ico", "apps/mod-14/src/assets"],
+        "styles": ["apps/mod-14/src/styles.scss"],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/mod-14/src/environments/environment.ts",
+              "with": "apps/mod-14/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "options": {
+        "buildTarget": "mod-14:build",
+        "hmr": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "mod-14:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/mod-14/**/*.{ts,tsx,js,jsx}"]
+      }
+    }
+  },
+  "tags": []
+}
