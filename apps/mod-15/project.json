@@ -1,0 +1,62 @@
+{
+  "root": "apps/mod-15",
+  "sourceRoot": "apps/mod-15/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/node:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "development",
+      "options": {
+        "compiler": "swc",
+        "outputPath": "dist/apps/mod-15",
+        "main": "apps/mod-15/src/main.ts",
+        "tsConfig": "apps/mod-15/tsconfig.app.json",
+        "assets": ["apps/mod-15/src/assets"]
+      },
+      "configurations": {
+        "development": {
+          "optimization": false,
+          "outputHashing": "all",
+          "sourceMap": true,
+          "namedChunks": false,
+          "extractLicenses": false,
+          "vendorChunk": false
+        },
+        "production": {
+          "optimization": true,
+          "extractLicenses": true,
+          "inspect": false,
+          "fileReplacements": [
+            {
+              "replace": "apps/mod-15/src/environments/environment.ts",
+              "with": "apps/mod-15/src/environments/environment.prod.ts"
+            }
+          ]
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/node:node",
+      "options": {
+        "buildTarget": "mod-15:build:development"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/mod-15/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/mod-15"],
+      "options": {
+        "jestConfig": "apps/mod-15/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
