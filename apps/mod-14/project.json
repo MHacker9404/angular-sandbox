@@ -16,9 +16,9 @@
         "polyfills": "apps/mod-14/src/polyfills.ts",
         "tsConfig": "apps/mod-14/tsconfig.app.json",
         "assets": ["apps/mod-14/src/favicon.ico", "apps/mod-14/src/assets"],
-        "styles": ["apps/mod-14/src/styles.scss"],
+        "styles": [],
         "scripts": [],
-        "webpackConfig": "@nrwl/react/plugins/webpack"
+        "webpackConfig": "apps/mod-14/webpack.config.js"
       },
       "configurations": {
         "development": {
@@ -30,6 +30,7 @@
           "vendorChunk": false
         },
         "production": {
+          "webpackConfig": "apps/mod-14/webpack.prod.config.js",
           "fileReplacements": [
             {
               "replace": "apps/mod-14/src/environments/environment.ts",
@@ -45,24 +46,22 @@
         }
       }
     },
+
     "serve": {
       "executor": "@nrwl/web:dev-server",
       "options": {
         "buildTarget": "mod-14:build:development",
-        "hmr": true
-      },
-      "configurations": {
-        "development": {
-          "buildTarget": "mod-14:build:development",
-          "allowedHosts":["http://localhost", "http://0.0.0.0"],
-          "hmr": true
-        },
-        "production": {
-          "buildTarget": "mod-14:build:production",
-          "hmr": false
+        // https://stackoverflow.com/questions/48977194/docker-react-does-not-work-in-localhost/48977836#48977836
+        "host": "0.0.0.0",
+        "port": 3000,
+        "hmr": true,
+        "watch": true,
+        "historyApiFallback": {
+          "index": "./index.html"
         }
       }
     },
+
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
