@@ -84,6 +84,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@schematics/angular", "npm:13.3.1"],\
             ["@swc/cli", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:0.1.57"],\
             ["@swc/core", "npm:1.2.163"],\
+            ["@types/bootstrap", "npm:5.1.9"],\
             ["@types/eslint", "npm:8.4.1"],\
             ["@types/jest", "npm:27.4.1"],\
             ["@types/node", "npm:17.0.23"],\
@@ -91,6 +92,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/eslint-plugin", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:5.18.0"],\
             ["@typescript-eslint/parser", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:5.18.0"],\
             ["@yarnpkg/sdks", "npm:2.6.0"],\
+            ["bootstrap", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:5.1.3"],\
             ["cypress", "npm:9.5.3"],\
             ["eslint", "npm:8.12.0"],\
             ["eslint-config-prettier", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:8.5.0"],\
@@ -7766,6 +7768,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@popperjs/core", [\
+        ["npm:2.11.5", {\
+          "packageLocation": "./.yarn/cache/@popperjs-core-npm-2.11.5-a338f16bd4-fd7f9dca3f.zip/node_modules/@popperjs/core/",\
+          "packageDependencies": [\
+            ["@popperjs/core", "npm:2.11.5"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@renovate/pep440", [\
         ["npm:1.0.0", {\
           "packageLocation": "./.yarn/cache/@renovate-pep440-npm-1.0.0-7950141d03-1ee0cd86bb.zip/node_modules/@renovate/pep440/",\
@@ -8781,6 +8792,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@types/bootstrap", [\
+        ["npm:5.1.9", {\
+          "packageLocation": "./.yarn/cache/@types-bootstrap-npm-5.1.9-1184a362b2-cf04f09f37.zip/node_modules/@types/bootstrap/",\
+          "packageDependencies": [\
+            ["@types/bootstrap", "npm:5.1.9"],\
+            ["@popperjs/core", "npm:2.11.5"],\
+            ["@types/jquery", "npm:3.5.14"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@types/cacheable-request", [\
         ["npm:6.0.2", {\
           "packageLocation": "./.yarn/cache/@types-cacheable-request-npm-6.0.2-894b6992d5-667d25808d.zip/node_modules/@types/cacheable-request/",\
@@ -9000,6 +9022,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/jest", "npm:27.4.1"],\
             ["jest-matcher-utils", "npm:27.5.1"],\
             ["pretty-format", "npm:27.5.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/jquery", [\
+        ["npm:3.5.14", {\
+          "packageLocation": "./.yarn/cache/@types-jquery-npm-3.5.14-5fafe75fbb-159d6f804e.zip/node_modules/@types/jquery/",\
+          "packageDependencies": [\
+            ["@types/jquery", "npm:3.5.14"],\
+            ["@types/sizzle", "npm:2.3.3"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -11834,6 +11866,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/boolbase-npm-1.0.0-965fe9af6d-3e25c80ef6.zip/node_modules/boolbase/",\
           "packageDependencies": [\
             ["boolbase", "npm:1.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["bootstrap", [\
+        ["npm:5.1.3", {\
+          "packageLocation": "./.yarn/cache/bootstrap-npm-5.1.3-691fdc19a6-301b5ed872.zip/node_modules/bootstrap/",\
+          "packageDependencies": [\
+            ["bootstrap", "npm:5.1.3"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:5.1.3", {\
+          "packageLocation": "./.yarn/__virtual__/bootstrap-virtual-f5f409d9ab/0/cache/bootstrap-npm-5.1.3-691fdc19a6-301b5ed872.zip/node_modules/bootstrap/",\
+          "packageDependencies": [\
+            ["bootstrap", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:5.1.3"],\
+            ["@popperjs/core", null],\
+            ["@types/popperjs__core", null]\
+          ],\
+          "packagePeers": [\
+            "@popperjs/core",\
+            "@types/popperjs__core"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -22447,6 +22501,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@schematics/angular", "npm:13.3.1"],\
             ["@swc/cli", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:0.1.57"],\
             ["@swc/core", "npm:1.2.163"],\
+            ["@types/bootstrap", "npm:5.1.9"],\
             ["@types/eslint", "npm:8.4.1"],\
             ["@types/jest", "npm:27.4.1"],\
             ["@types/node", "npm:17.0.23"],\
@@ -22454,6 +22509,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/eslint-plugin", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:5.18.0"],\
             ["@typescript-eslint/parser", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:5.18.0"],\
             ["@yarnpkg/sdks", "npm:2.6.0"],\
+            ["bootstrap", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:5.1.3"],\
             ["cypress", "npm:9.5.3"],\
             ["eslint", "npm:8.12.0"],\
             ["eslint-config-prettier", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:8.5.0"],\

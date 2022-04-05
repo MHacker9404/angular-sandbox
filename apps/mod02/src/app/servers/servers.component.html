@@ -1,0 +1,10 @@
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer($event)">Add server</button>
+<hr>
+<input type="text" name="serverName" id="serverName" class="form-control" [(ngModel)]="serverName" />
+<!-- <p>{{ serverCreationStatus }}</p> -->
+<p *ngIf="serverCreated">Server was created, server name is {{ serverName }}</p>
+<hr>
+
+<nx-apps-server *ngFor="let server of servers; let i = index">
+    {{server}}
+</nx-apps-server>

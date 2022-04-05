@@ -1,6 +1,6 @@
 {
-  "version": 2,
-  "projects": {
-    "mod02": "apps/mod02"
-  }
+    "version": 2,
+    "projects": {
+        "mod02": "apps/mod02"
+    }
 }
