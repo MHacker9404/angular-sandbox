@@ -1,6 +1,7 @@
 {
     "version": 2,
     "projects": {
-        "mod02": "apps/mod02"
+        "mod02": "apps/mod02",
+        "mod03": "apps/mod03"
     }
 }
