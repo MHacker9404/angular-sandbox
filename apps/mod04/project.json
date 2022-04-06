@@ -1,24 +1,24 @@
 {
     "projectType": "application",
-    "root": "apps/mod03",
-    "sourceRoot": "apps/mod03/src",
+    "root": "apps/mod04",
+    "sourceRoot": "apps/mod04/src",
     "prefix": "nx-apps",
     "targets": {
         "build": {
             "executor": "@nrwl/angular:webpack-browser",
             "outputs": ["{options.outputPath}"],
             "options": {
-                "outputPath": "dist/apps/mod03",
-                "index": "apps/mod03/src/index.html",
-                "main": "apps/mod03/src/main.ts",
-                "polyfills": "apps/mod03/src/polyfills.ts",
-                "tsConfig": "apps/mod03/tsconfig.app.json",
+                "outputPath": "dist/apps/mod04",
+                "index": "apps/mod04/src/index.html",
+                "main": "apps/mod04/src/main.ts",
+                "polyfills": "apps/mod04/src/polyfills.ts",
+                "tsConfig": "apps/mod04/tsconfig.app.json",
                 "inlineStyleLanguage": "scss",
                 "assets": [
-                    "apps/mod03/src/favicon.ico",
-                    "apps/mod03/src/assets"
+                    "apps/mod04/src/favicon.ico",
+                    "apps/mod04/src/assets"
                 ],
-                "styles": ["apps/mod03/src/styles.scss"],
+                "styles": ["apps/mod04/src/styles.scss"],
                 "scripts": []
             },
             "configurations": {
@@ -37,8 +37,8 @@
                     ],
                     "fileReplacements": [
                         {
-                            "replace": "apps/mod03/src/environments/environment.ts",
-                            "with": "apps/mod03/src/environments/environment.prod.ts"
+                            "replace": "apps/mod04/src/environments/environment.ts",
+                            "with": "apps/mod04/src/environments/environment.prod.ts"
                         }
                     ],
                     "outputHashing": "all"
@@ -58,10 +58,10 @@
             "executor": "@nrwl/angular:webpack-server",
             "configurations": {
                 "production": {
-                    "browserTarget": "mod03:build:production"
+                    "browserTarget": "mod04:build:production"
                 },
                 "development": {
-                    "browserTarget": "mod03:build:development",
+                    "browserTarget": "mod04:build:development",
                     "watch": true,
                     "liveReload": true,
                     "disableHostCheck": true
@@ -76,15 +76,15 @@
         "extract-i18n": {
             "executor": "@angular-devkit/build-angular:extract-i18n",
             "options": {
-                "browserTarget": "mod03:build"
+                "browserTarget": "mod04:build"
             }
         },
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
                 "lintFilePatterns": [
-                    "apps/mod03/src/**/*.ts",
-                    "apps/mod03/src/**/*.html"
+                    "apps/mod04/src/**/*.ts",
+                    "apps/mod04/src/**/*.html"
                 ]
             }
         }
