@@ -5,7 +5,8 @@
     "prefix": "nx-apps",
     "targets": {
         "build": {
-            "executor": "@angular-devkit/build-angular:browser",
+            // https://nx.dev/packages/angular/executors/webpack-browser
+            "executor": "@nrwl/angular:webpack-browser",
             "outputs": ["{options.outputPath}"],
             "options": {
                 "outputPath": "dist/apps/mod03",
@@ -20,6 +21,9 @@
                 ],
                 "styles": ["apps/mod03/src/styles.scss"],
                 "scripts": []
+                // "customWebpackConfig": {
+                //     "path": "apps/appName/webpack.config.js"
+                // }
             },
             "configurations": {
                 "production": {
@@ -55,21 +59,23 @@
             "defaultConfiguration": "production"
         },
         "serve": {
-            "executor": "@angular-devkit/build-angular:dev-server",
+            // https://nx.dev/packages/angular/executors/webpack-server
+            "executor": "@nrwl/angular:webpack-server",
             "configurations": {
                 "production": {
                     "browserTarget": "mod03:build:production"
                 },
                 "development": {
                     "browserTarget": "mod03:build:development",
-                    "watch": true
+                    "watch": true,
+                    "liveReload": true,
+                    "disableHostCheck": true
                 }
             },
             "defaultConfiguration": "development",
             "options": {
                 "host": "0.0.0.0",
-                "port": 4200,
-                "watch":true
+                "port": 4200
             }
         },
         "extract-i18n": {
