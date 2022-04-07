@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import Server from './server.model';
 
 @Component({
     selector: 'nx-apps-root',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
     styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-    title = 'mod04';
+    serverElements: Server[] = [ ];
+
+    onServerAdded = (server:Server): void => {
+        this.serverElements.push(server);
+    };
+
+    onBlueprintAdded = (blueprint: Server): void => {
+        this.serverElements.push(blueprint);
+    };
 }

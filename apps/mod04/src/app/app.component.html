@@ -1,1 +1,18 @@
-<nx-apps-nx-welcome></nx-apps-nx-welcome>
+<div class="container">
+    <!-- <nx-apps-cockpit (serverCreated)="onServerAdded($event)" (blueprintCreated)="onBlueprintAdded($event)"></nx-apps-cockpit> -->
+    <!-- with output alias -->
+    <nx-apps-cockpit (serverCreated)="onServerAdded($event)" (bpCreated)="onBlueprintAdded($event)"></nx-apps-cockpit>
+    <hr />
+    <div class="row">
+        <div class="col-xs-12">
+            <!-- <nx-apps-server-element *ngFor="let server of serverElements" [server]="server"></nx-apps-server-element> -->
+            <!-- with input alias -->
+            <nx-apps-server-element *ngFor="let server of serverElements" [serverElement]="server">
+                <p class="card-text" #serverContent>
+                    <strong *ngIf="server.type === 'server'" style="color: red">{{ server.content }}</strong>
+                    <em *ngIf="server.type === 'blueprint'">{{ server.content }}</em>
+                </p>
+            </nx-apps-server-element>
+        </div>
+    </div>
+</div>
