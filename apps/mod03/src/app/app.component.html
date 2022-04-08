@@ -1,9 +1,11 @@
-<nx-apps-header></nx-apps-header>
+<nx-apps-header (featureSelected)="onFeatureSelected($event)"></nx-apps-header>
 <div class="container">
     <div class="row">
         <div class="col-xs-12">
-            <nx-apps-recipes></nx-apps-recipes>
-            <nx-apps-shopping-list></nx-apps-shopping-list>
+            <nx-apps-recipes *ngIf="feature === 'recipe'"></nx-apps-recipes>
+            <nx-apps-shopping-list
+                *ngIf="feature === 'shopping'"
+            ></nx-apps-shopping-list>
         </div>
     </div>
 </div>
