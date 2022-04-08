@@ -1,5 +1,6 @@
-import { Component, OnInit, NgModule } from '@angular/core';
+import { Component, OnInit, NgModule, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import Recipe from '../../recipe.model';
 
 @Component({
     selector: 'nx-apps-recipe-item',
@@ -7,9 +8,14 @@ import { CommonModule } from '@angular/common';
     styleUrls: ['./recipe-item.component.scss'],
 })
 export class RecipeItemComponent implements OnInit {
+    @Input() recipe!: Recipe;
+    @Output() onSelected: EventEmitter<Recipe> = new EventEmitter<Recipe>();
+
     constructor() {}
 
     ngOnInit(): void {}
+
+    onClicked = () => this.onSelected.emit(this.recipe);
 }
 
 @NgModule({
