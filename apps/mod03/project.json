@@ -14,10 +14,7 @@
                 "polyfills": "apps/mod03/src/polyfills.ts",
                 "tsConfig": "apps/mod03/tsconfig.app.json",
                 "inlineStyleLanguage": "scss",
-                "assets": [
-                    "apps/mod03/src/favicon.ico",
-                    "apps/mod03/src/assets"
-                ],
+                "assets": ["apps/mod03/src/favicon.ico", "apps/mod03/src/assets"],
                 "styles": ["apps/mod03/src/styles.scss"],
                 "scripts": []
             },
@@ -82,10 +79,7 @@
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": [
-                    "apps/mod03/src/**/*.ts",
-                    "apps/mod03/src/**/*.html"
-                ]
+                "lintFilePatterns": ["apps/mod03/src/**/*.ts", "apps/mod03/src/**/*.html"]
             }
         }
     },
