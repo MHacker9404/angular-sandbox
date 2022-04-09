@@ -1,6 +1,7 @@
 import { Component, OnInit, NgModule, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import Recipe from '../recipe.model';
+import { DropdownDirectiveModule } from '../../shared/dropdown/dropdown.directive';
 
 @Component({
     selector: 'nx-apps-recipe-details',
@@ -16,7 +17,7 @@ export class RecipeDetailsComponent implements OnInit {
 }
 
 @NgModule({
-    imports: [CommonModule],
+    imports: [CommonModule, DropdownDirectiveModule],
     declarations: [RecipeDetailsComponent],
     exports: [RecipeDetailsComponent],
 })

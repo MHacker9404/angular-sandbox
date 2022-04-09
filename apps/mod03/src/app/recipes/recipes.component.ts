@@ -1,8 +1,8 @@
 import { Component, OnInit, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import {RecipeListComponentModule} from './recipe-list/recipe-list.component';
-import {RecipeDetailsComponentModule} from './recipe-details/recipe-details.component';
+import { RecipeListComponentModule } from './recipe-list/recipe-list.component';
+import { RecipeDetailsComponentModule } from './recipe-details/recipe-details.component';
 import Recipe from './recipe.model';
 
 @Component({
@@ -17,7 +17,7 @@ export class RecipesComponent implements OnInit {
 
     ngOnInit(): void {}
 
-    onRecipeSelected = (recipe: Recipe) => this.selectedRecipe = recipe;
+    onRecipeSelected = (recipe: Recipe) => (this.selectedRecipe = recipe);
 }
 
 @NgModule({
