@@ -6,10 +6,10 @@ import { Component } from '@angular/core';
     styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-    feature: 'recipe' | 'shopping' = 'recipe';
+    feature: string = 'recipe';
     constructor() { }
 
-    onFeatureSelected = (feature: 'recipe' | 'shopping') => {
+    onFeatureSelected = (feature: string) => {
         this.feature = feature;
     }
 }

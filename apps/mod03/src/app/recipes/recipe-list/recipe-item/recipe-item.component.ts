@@ -9,13 +9,15 @@ import Recipe from '../../recipe.model';
 })
 export class RecipeItemComponent implements OnInit {
     @Input() recipe!: Recipe;
-    @Output() onSelected: EventEmitter<Recipe> = new EventEmitter<Recipe>();
+    // @Output() onSelected: EventEmitter<Recipe> = new EventEmitter<Recipe>();
+    @Output() onSelected: EventEmitter<void> = new EventEmitter<void>();
 
     constructor() {}
 
     ngOnInit(): void {}
 
-    onClicked = () => this.onSelected.emit(this.recipe);
+    // onClicked = () => this.onSelected.emit(this.recipe);
+    onClicked = () => this.onSelected.emit();
 }
 
 @NgModule({

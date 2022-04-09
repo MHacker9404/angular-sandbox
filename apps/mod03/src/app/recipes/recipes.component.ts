@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import {RecipeListComponentModule} from './recipe-list/recipe-list.component';
 import {RecipeDetailsComponentModule} from './recipe-details/recipe-details.component';
+import Recipe from './recipe.model';
 
 @Component({
     selector: 'nx-apps-recipes',
@@ -10,9 +11,13 @@ import {RecipeDetailsComponentModule} from './recipe-details/recipe-details.comp
     styleUrls: ['./recipes.component.scss'],
 })
 export class RecipesComponent implements OnInit {
+    selectedRecipe: Recipe | null = null;
+
     constructor() {}
 
     ngOnInit(): void {}
+
+    onRecipeSelected = (recipe: Recipe) => this.selectedRecipe = recipe;
 }
 
 @NgModule({

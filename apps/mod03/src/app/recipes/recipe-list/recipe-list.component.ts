@@ -1,6 +1,6 @@
-import { Component, OnInit, NgModule } from '@angular/core';
+import { Component, OnInit, NgModule, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {RecipeItemComponentModule} from './recipe-item/recipe-item.component';
+import { RecipeItemComponentModule } from './recipe-item/recipe-item.component';
 import Recipe from '../recipe.model';
 
 @Component({
@@ -9,6 +9,8 @@ import Recipe from '../recipe.model';
     styleUrls: ['./recipe-list.component.scss'],
 })
 export class RecipeListComponent implements OnInit {
+    @Output() recipeSelected: EventEmitter<Recipe> = new EventEmitter<Recipe>();
+
     recipes: Recipe[] = [
         new Recipe(
             'Test',
@@ -16,7 +18,7 @@ export class RecipeListComponent implements OnInit {
             'https://www.cookipedia.co.uk/wiki/images/e/e3/Prawn_thermidor_recipe.jpg'
         ),
         new Recipe(
-            'Test',
+            'Another Test Recipe',
             'A test recipe description',
             'https://www.cookipedia.co.uk/wiki/images/e/e3/Prawn_thermidor_recipe.jpg'
         ),
@@ -25,10 +27,12 @@ export class RecipeListComponent implements OnInit {
     constructor() {}
 
     ngOnInit(): void {}
+
+    onRecipeSelected = (recipe: Recipe) => this.recipeSelected.emit(recipe);
 }
 
 @NgModule({
-    imports: [CommonModule,RecipeItemComponentModule ],
+    imports: [CommonModule, RecipeItemComponentModule],
     declarations: [RecipeListComponent],
     exports: [RecipeListComponent],
 })

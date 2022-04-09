@@ -7,13 +7,13 @@ import { CommonModule } from '@angular/common';
     styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-    @Output() featureSelected: EventEmitter<'recipe'|'shopping'> = new EventEmitter<'recipe' | 'shopping'>();
+    @Output() featureSelected: EventEmitter<string> = new EventEmitter<string>();
 
     constructor() {}
 
     ngOnInit(): void {}
 
-    onSelect(feature: 'recipe' | 'shopping') {
+    onSelect(feature: string) {
         this.featureSelected.emit(feature);
     }
 }

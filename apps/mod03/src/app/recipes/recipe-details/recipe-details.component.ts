@@ -1,5 +1,6 @@
-import { Component, OnInit, NgModule } from '@angular/core';
+import { Component, OnInit, NgModule, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import Recipe from '../recipe.model';
 
 @Component({
     selector: 'nx-apps-recipe-details',
@@ -7,6 +8,8 @@ import { CommonModule } from '@angular/common';
     styleUrls: ['./recipe-details.component.scss'],
 })
 export class RecipeDetailsComponent implements OnInit {
+    @Input() recipe: Recipe | null = null;
+
     constructor() {}
 
     ngOnInit(): void {}

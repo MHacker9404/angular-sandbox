@@ -1,5 +1,6 @@
 import { Component, OnInit, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import {ShoppingEditComponentModule} from './shopping-edit/shopping-edit.component';
 import Ingredient from '../shared/ingredient.model';
@@ -18,10 +19,14 @@ export class ShoppingListComponent implements OnInit {
     constructor() {}
 
     ngOnInit(): void {}
+
+    onIngredientAdded = (ingredient: Ingredient) => {
+        this.ingredients.push(ingredient);
+     };
 }
 
 @NgModule({
-    imports: [CommonModule, ShoppingEditComponentModule],
+    imports: [CommonModule, FormsModule, ShoppingEditComponentModule],
     declarations: [ShoppingListComponent],
     exports: [ShoppingListComponent],
 })

@@ -1,8 +1,11 @@
 <div class="row">
     <div class="col-md-5">
-        <nx-apps-recipe-list></nx-apps-recipe-list>
+        <nx-apps-recipe-list (recipeSelected)="onRecipeSelected($event)"></nx-apps-recipe-list>
     </div>
     <div class="col-md-7">
-        <nx-apps-recipe-details></nx-apps-recipe-details>
+        <nx-apps-recipe-details *ngIf="selectedRecipe; else infoText" [recipe]="selectedRecipe"></nx-apps-recipe-details>
+        <ng-template #infoText>
+            <p>Please select a recip</p>
+        </ng-template>
     </div>
 </div>
