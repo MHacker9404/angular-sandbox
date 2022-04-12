@@ -2,6 +2,7 @@ import { Component, OnInit, NgModule, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import Recipe from '../recipe.model';
 import { DropdownDirectiveModule } from '../../shared/dropdown/dropdown.directive';
+import ShoppingListService from '../../shopping-list/shopping-list.service';
 
 @Component({
     selector: 'nx-apps-recipe-details',
@@ -11,9 +12,11 @@ import { DropdownDirectiveModule } from '../../shared/dropdown/dropdown.directiv
 export class RecipeDetailsComponent implements OnInit {
     @Input() recipe: Recipe | null = null;
 
-    constructor() {}
+    constructor(private _shoppingListSvc: ShoppingListService) {}
 
     ngOnInit(): void {}
+
+    onAddToShoppingList = () => this._shoppingListSvc.addIngredients(this.recipe!.ingredients);
 }
 
 @NgModule({

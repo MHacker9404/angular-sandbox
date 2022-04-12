@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { RecipeListComponentModule } from './recipe-list/recipe-list.component';
 import { RecipeDetailsComponentModule } from './recipe-details/recipe-details.component';
 import Recipe from './recipe.model';
+import RecipeService from './recipe.service';
 
 @Component({
     selector: 'nx-apps-recipes',
@@ -13,11 +14,11 @@ import Recipe from './recipe.model';
 export class RecipesComponent implements OnInit {
     selectedRecipe: Recipe | null = null;
 
-    constructor() {}
+    constructor(private _recipeSvc: RecipeService) {
+        this._recipeSvc.recipeSelected.subscribe((recipe:Recipe) => this.selectedRecipe = recipe);
+    }
 
     ngOnInit(): void {}
-
-    onRecipeSelected = (recipe: Recipe) => (this.selectedRecipe = recipe);
 }
 
 @NgModule({

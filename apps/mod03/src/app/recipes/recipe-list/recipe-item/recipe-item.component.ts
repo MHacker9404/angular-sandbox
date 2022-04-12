@@ -1,6 +1,7 @@
-import { Component, OnInit, NgModule, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, NgModule, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import Recipe from '../../recipe.model';
+import RecipeService from '../../recipe.service';
 
 @Component({
     selector: 'nx-apps-recipe-item',
@@ -10,14 +11,14 @@ import Recipe from '../../recipe.model';
 export class RecipeItemComponent implements OnInit {
     @Input() recipe!: Recipe;
     // @Output() onSelected: EventEmitter<Recipe> = new EventEmitter<Recipe>();
-    @Output() onSelected: EventEmitter<void> = new EventEmitter<void>();
+    // @Output() onSelected: EventEmitter<void> = new EventEmitter<void>();
 
-    constructor() {}
+    constructor(private _recipeSvc: RecipeService) {}
 
     ngOnInit(): void {}
 
     // onClicked = () => this.onSelected.emit(this.recipe);
-    onClicked = () => this.onSelected.emit();
+    onClicked = () => this._recipeSvc.recipeSelected.emit(this.recipe);
 }
 
 @NgModule({

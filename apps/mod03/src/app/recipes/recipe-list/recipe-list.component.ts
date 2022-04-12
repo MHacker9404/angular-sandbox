@@ -1,7 +1,8 @@
-import { Component, OnInit, NgModule, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RecipeItemComponentModule } from './recipe-item/recipe-item.component';
 import Recipe from '../recipe.model';
+import RecipeService from '../recipe.service';
 
 @Component({
     selector: 'nx-apps-recipe-list',
@@ -9,26 +10,13 @@ import Recipe from '../recipe.model';
     styleUrls: ['./recipe-list.component.scss'],
 })
 export class RecipeListComponent implements OnInit {
-    @Output() recipeSelected: EventEmitter<Recipe> = new EventEmitter<Recipe>();
+    recipes: Recipe[] = [];
 
-    recipes: Recipe[] = [
-        new Recipe(
-            'Test',
-            'A test recipe description',
-            'https://www.cookipedia.co.uk/wiki/images/e/e3/Prawn_thermidor_recipe.jpg'
-        ),
-        new Recipe(
-            'Another Test Recipe',
-            'A test recipe description',
-            'https://www.cookipedia.co.uk/wiki/images/e/e3/Prawn_thermidor_recipe.jpg'
-        ),
-    ];
+    constructor(private _recipeSvc: RecipeService) {}
 
-    constructor() {}
-
-    ngOnInit(): void {}
-
-    onRecipeSelected = (recipe: Recipe) => this.recipeSelected.emit(recipe);
+    ngOnInit(): void {
+        this.recipes = this._recipeSvc.recipes;
+    }
 }
 
 @NgModule({
