@@ -1,0 +1,87 @@
+{
+    "projectType": "application",
+    "root": "apps/mod10",
+    "sourceRoot": "apps/mod10/src",
+    "prefix": "nx-apps",
+    "targets": {
+        "build": {
+            "executor": "@nrwl/angular:webpack-browser",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/apps/mod10",
+                "index": "apps/mod10/src/index.html",
+                "main": "apps/mod10/src/main.ts",
+                "polyfills": "apps/mod10/src/polyfills.ts",
+                "tsConfig": "apps/mod10/tsconfig.app.json",
+                "inlineStyleLanguage": "scss",
+                "assets": ["apps/mod10/src/favicon.ico", "apps/mod10/src/assets"],
+                "styles": ["apps/mod10/src/styles.scss"],
+                "scripts": []
+            },
+            "configurations": {
+                "production": {
+                    "budgets": [
+                        {
+                            "type": "initial",
+                            "maximumWarning": "500kb",
+                            "maximumError": "1mb"
+                        },
+                        {
+                            "type": "anyComponentStyle",
+                            "maximumWarning": "2kb",
+                            "maximumError": "4kb"
+                        }
+                    ],
+                    "fileReplacements": [
+                        {
+                            "replace": "apps/mod10/src/environments/environment.ts",
+                            "with": "apps/mod10/src/environments/environment.prod.ts"
+                        }
+                    ],
+                    "outputHashing": "all"
+                },
+                "development": {
+                    "buildOptimizer": false,
+                    "optimization": false,
+                    "vendorChunk": true,
+                    "extractLicenses": false,
+                    "sourceMap": true,
+                    "namedChunks": true
+                }
+            },
+            "defaultConfiguration": "development"
+        },
+        "serve": {
+            "executor": "@nrwl/angular:webpack-server",
+            "configurations": {
+                "production": {
+                    "browserTarget": "mod10:build:production"
+                },
+                "development": {
+                    "browserTarget": "mod10:build:development",
+                    "watch": true,
+                    "liveReload": true,
+                    "disableHostCheck": true
+                }
+            },
+            "defaultConfiguration": "development",
+            "options": {
+                "host": "0.0.0.0",
+                "port": 4200
+            }
+        },
+        "extract-i18n": {
+            "executor": "@angular-devkit/build-angular:extract-i18n",
+            "options": {
+                "browserTarget": "mod10:build"
+            }
+        },
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "options": {
+                "lintFilePatterns": ["apps/mod10/src/**/*.ts", "apps/mod10/src/**/*.html"]
+            }
+        }
+    },
+    "tags": []
+}
