@@ -78,6 +78,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lodash-es", "npm:4.17.21"],\
             ["next", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:12.1.4"],\
             ["ngx-deploy-npm", "npm:3.1.6"],\
+            ["nx", "npm:13.10.1"],\
             ["nx-electron", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:12.1.0"],\
             ["nx-plugin-devkit", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:0.5.0"],\
             ["nx-plugin-workspace", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:0.5.5"],\
@@ -18001,6 +18002,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lodash-es", "npm:4.17.21"],\
             ["next", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:12.1.4"],\
             ["ngx-deploy-npm", "npm:3.1.6"],\
+            ["nx", "npm:13.10.1"],\
             ["nx-electron", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:12.1.0"],\
             ["nx-plugin-devkit", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:0.5.0"],\
             ["nx-plugin-workspace", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:0.5.5"],\

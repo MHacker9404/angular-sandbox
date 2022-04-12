@@ -54,6 +54,7 @@
     "husky": "^7.0.4",
     "next": "^12.1.4",
     "ngx-deploy-npm": "^3.1.6",
+    "nx": "^13.10.1",
     "nx-electron": "^12.1.0",
     "nx-plugin-devkit": "^0.5.0",
     "nx-plugin-workspace": "^0.5.5",
