@@ -270,6 +270,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@angular/common@npm:^13.3.2":
+  version: 13.3.2
+  resolution: "@angular/common@npm:13.3.2"
+  dependencies:
+    tslib: ^2.3.0
+  peerDependencies:
+    "@angular/core": 13.3.2
+    rxjs: ^6.5.3 || ^7.4.0
+  checksum: 97832dd7727a3d8231ce70ac86d4b9f473a89450872a0cce651ed415a32c96b1b86e4352d801a5a32970eea51719c584db1245ab0b91cdf40488b9f34227b8ef
+  languageName: node
+  linkType: hard
+
 "@angular/compiler-cli@npm:^13.3.2":
   version: 13.3.2
   resolution: "@angular/compiler-cli@npm:13.3.2"
@@ -313,6 +325,36 @@ __metadata:
     rxjs: ^6.5.3 || ^7.4.0
     zone.js: ~0.11.4
   checksum: 39420b321bbb18bdb6a934fcc372b96d045edf261753f0e56d1415098426f3c8a4342928ce2b006c837f3a39d936cf6881251445406a8a47f4759a291e091d2a
+  languageName: node
+  linkType: hard
+
+"@angular/platform-browser-dynamic@npm:^13.3.2":
+  version: 13.3.2
+  resolution: "@angular/platform-browser-dynamic@npm:13.3.2"
+  dependencies:
+    tslib: ^2.3.0
+  peerDependencies:
+    "@angular/common": 13.3.2
+    "@angular/compiler": 13.3.2
+    "@angular/core": 13.3.2
+    "@angular/platform-browser": 13.3.2
+  checksum: 84f901ee6ad89db04c2da8e19e22ec6987b7fb15c38074a8d74d7b91dc25e7515d9ff851dbfba2b5059ffe0f3626e1d1e9018f02b4a32457f684c466f541084d
+  languageName: node
+  linkType: hard
+
+"@angular/platform-browser@npm:^13.3.2":
+  version: 13.3.2
+  resolution: "@angular/platform-browser@npm:13.3.2"
+  dependencies:
+    tslib: ^2.3.0
+  peerDependencies:
+    "@angular/animations": 13.3.2
+    "@angular/common": 13.3.2
+    "@angular/core": 13.3.2
+  peerDependenciesMeta:
+    "@angular/animations":
+      optional: true
+  checksum: e4dc087de51ab13d807169c139fe998f1f726adf90e1d809084b2d91fc9f74a9cc2adba75de6594fb85a8af801353f1fec8e54a4222ce2b30ad9318a20bc56ce
   languageName: node
   linkType: hard
 
@@ -14875,9 +14917,12 @@ __metadata:
     "@angular-devkit/build-angular": ^13.3.2
     "@angular-devkit/core": ^13.3.2
     "@angular/cli": ^13.3.2
+    "@angular/common": ^13.3.2
     "@angular/compiler": ^13.3.2
     "@angular/compiler-cli": ^13.3.2
     "@angular/core": ^13.3.2
+    "@angular/platform-browser": ^13.3.2
+    "@angular/platform-browser-dynamic": ^13.3.2
     "@codebrew/nx-aws-cdk": ^1.0.3
     "@commitlint/cli": ^16.2.3
     "@commitlint/config-angular": ^16.2.3
@@ -14934,6 +14979,7 @@ __metadata:
     typescript: <4.6.0
     yargs-parser: ^21.0.1
     yarn-audit-fix: ^9.2.2
+    zone.js: ^0.11.5
   languageName: unknown
   linkType: soft
 
@@ -20956,5 +21002,14 @@ __metadata:
   version: 1.0.0
   resolution: "yocto-queue@npm:1.0.0"
   checksum: 2cac84540f65c64ccc1683c267edce396b26b1e931aa429660aefac8fbe0188167b7aee815a3c22fa59a28a58d898d1a2b1825048f834d8d629f4c2a5d443801
+  languageName: node
+  linkType: hard
+
+"zone.js@npm:^0.11.5":
+  version: 0.11.5
+  resolution: "zone.js@npm:0.11.5"
+  dependencies:
+    tslib: ^2.3.0
+  checksum: 7dba3af83cc68e881e8a5cc549e4a7bab5f32c5289838f14eb251871816210a39ed8bcd89030593b56d469b4aa8271d644e71ad408fcadd4ccd61b8c7203f2ef
   languageName: node
   linkType: hard

@@ -38,9 +38,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@angular-devkit/build-angular", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:13.3.2"],\
             ["@angular-devkit/core", "virtual:9f0ba3cb19601a4eddfb1a98e3231916145aa2db5d4fc89a3974a88e04c86f60f88dabe749fecf26916ef9ac32cf7a5de1f17ed532fe602f1a25118beed391fd#npm:13.3.2"],\
             ["@angular/cli", "npm:13.3.2"],\
+            ["@angular/common", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:13.3.2"],\
             ["@angular/compiler", "npm:13.3.2"],\
             ["@angular/compiler-cli", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:13.3.2"],\
             ["@angular/core", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:13.3.2"],\
+            ["@angular/platform-browser", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:13.3.2"],\
+            ["@angular/platform-browser-dynamic", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:13.3.2"],\
             ["@codebrew/nx-aws-cdk", "npm:1.0.3"],\
             ["@commitlint/cli", "npm:16.2.3"],\
             ["@commitlint/config-angular", "npm:16.2.3"],\
@@ -96,7 +99,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["tslib", "npm:2.3.1"],\
             ["typescript", "patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=bda367"],\
             ["yargs-parser", "npm:21.0.1"],\
-            ["yarn-audit-fix", "npm:9.2.2"]\
+            ["yarn-audit-fix", "npm:9.2.2"],\
+            ["zone.js", "npm:0.11.5"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -417,6 +421,33 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@angular/common", [\
+        ["npm:13.3.2", {\
+          "packageLocation": "./.yarn/cache/@angular-common-npm-13.3.2-05e24299ab-97832dd772.zip/node_modules/@angular/common/",\
+          "packageDependencies": [\
+            ["@angular/common", "npm:13.3.2"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:13.3.2", {\
+          "packageLocation": "./.yarn/__virtual__/@angular-common-virtual-01cb09de44/0/cache/@angular-common-npm-13.3.2-05e24299ab-97832dd772.zip/node_modules/@angular/common/",\
+          "packageDependencies": [\
+            ["@angular/common", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:13.3.2"],\
+            ["@angular/core", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:13.3.2"],\
+            ["@types/angular__core", null],\
+            ["@types/rxjs", null],\
+            ["rxjs", "npm:7.5.5"],\
+            ["tslib", "npm:2.3.1"]\
+          ],\
+          "packagePeers": [\
+            "@angular/core",\
+            "@types/angular__core",\
+            "@types/rxjs",\
+            "rxjs"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@angular/compiler", [\
         ["npm:13.3.2", {\
           "packageLocation": "./.yarn/cache/@angular-compiler-npm-13.3.2-84a69f0c81-ac5c74f81f.zip/node_modules/@angular/compiler/",\
@@ -479,13 +510,79 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/zone.js", null],\
             ["rxjs", "npm:7.5.5"],\
             ["tslib", "npm:2.3.1"],\
-            ["zone.js", null]\
+            ["zone.js", "npm:0.11.5"]\
           ],\
           "packagePeers": [\
             "@types/rxjs",\
             "@types/zone.js",\
             "rxjs",\
             "zone.js"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@angular/platform-browser", [\
+        ["npm:13.3.2", {\
+          "packageLocation": "./.yarn/cache/@angular-platform-browser-npm-13.3.2-2279c10a8a-e4dc087de5.zip/node_modules/@angular/platform-browser/",\
+          "packageDependencies": [\
+            ["@angular/platform-browser", "npm:13.3.2"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:13.3.2", {\
+          "packageLocation": "./.yarn/__virtual__/@angular-platform-browser-virtual-2974c019ce/0/cache/@angular-platform-browser-npm-13.3.2-2279c10a8a-e4dc087de5.zip/node_modules/@angular/platform-browser/",\
+          "packageDependencies": [\
+            ["@angular/platform-browser", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:13.3.2"],\
+            ["@angular/animations", null],\
+            ["@angular/common", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:13.3.2"],\
+            ["@angular/core", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:13.3.2"],\
+            ["@types/angular__animations", null],\
+            ["@types/angular__common", null],\
+            ["@types/angular__core", null],\
+            ["tslib", "npm:2.3.1"]\
+          ],\
+          "packagePeers": [\
+            "@angular/animations",\
+            "@angular/common",\
+            "@angular/core",\
+            "@types/angular__animations",\
+            "@types/angular__common",\
+            "@types/angular__core"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@angular/platform-browser-dynamic", [\
+        ["npm:13.3.2", {\
+          "packageLocation": "./.yarn/cache/@angular-platform-browser-dynamic-npm-13.3.2-351f30794b-84f901ee6a.zip/node_modules/@angular/platform-browser-dynamic/",\
+          "packageDependencies": [\
+            ["@angular/platform-browser-dynamic", "npm:13.3.2"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:13.3.2", {\
+          "packageLocation": "./.yarn/__virtual__/@angular-platform-browser-dynamic-virtual-2f33ef93f2/0/cache/@angular-platform-browser-dynamic-npm-13.3.2-351f30794b-84f901ee6a.zip/node_modules/@angular/platform-browser-dynamic/",\
+          "packageDependencies": [\
+            ["@angular/platform-browser-dynamic", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:13.3.2"],\
+            ["@angular/common", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:13.3.2"],\
+            ["@angular/compiler", "npm:13.3.2"],\
+            ["@angular/core", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:13.3.2"],\
+            ["@angular/platform-browser", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:13.3.2"],\
+            ["@types/angular__common", null],\
+            ["@types/angular__compiler", null],\
+            ["@types/angular__core", null],\
+            ["@types/angular__platform-browser", null],\
+            ["tslib", "npm:2.3.1"]\
+          ],\
+          "packagePeers": [\
+            "@angular/common",\
+            "@angular/compiler",\
+            "@angular/core",\
+            "@angular/platform-browser",\
+            "@types/angular__common",\
+            "@types/angular__compiler",\
+            "@types/angular__core",\
+            "@types/angular__platform-browser"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -20391,9 +20488,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@angular-devkit/build-angular", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:13.3.2"],\
             ["@angular-devkit/core", "virtual:9f0ba3cb19601a4eddfb1a98e3231916145aa2db5d4fc89a3974a88e04c86f60f88dabe749fecf26916ef9ac32cf7a5de1f17ed532fe602f1a25118beed391fd#npm:13.3.2"],\
             ["@angular/cli", "npm:13.3.2"],\
+            ["@angular/common", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:13.3.2"],\
             ["@angular/compiler", "npm:13.3.2"],\
             ["@angular/compiler-cli", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:13.3.2"],\
             ["@angular/core", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:13.3.2"],\
+            ["@angular/platform-browser", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:13.3.2"],\
+            ["@angular/platform-browser-dynamic", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:13.3.2"],\
             ["@codebrew/nx-aws-cdk", "npm:1.0.3"],\
             ["@commitlint/cli", "npm:16.2.3"],\
             ["@commitlint/config-angular", "npm:16.2.3"],\
@@ -20449,7 +20549,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["tslib", "npm:2.3.1"],\
             ["typescript", "patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=bda367"],\
             ["yargs-parser", "npm:21.0.1"],\
-            ["yarn-audit-fix", "npm:9.2.2"]\
+            ["yarn-audit-fix", "npm:9.2.2"],\
+            ["zone.js", "npm:0.11.5"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -28234,6 +28335,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/yocto-queue-npm-1.0.0-7b502f1987-2cac84540f.zip/node_modules/yocto-queue/",\
           "packageDependencies": [\
             ["yocto-queue", "npm:1.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["zone.js", [\
+        ["npm:0.11.5", {\
+          "packageLocation": "./.yarn/cache/zone.js-npm-0.11.5-78b46cd237-7dba3af83c.zip/node_modules/zone.js/",\
+          "packageDependencies": [\
+            ["zone.js", "npm:0.11.5"],\
+            ["tslib", "npm:2.3.1"]\
           ],\
           "linkType": "HARD"\
         }]\
