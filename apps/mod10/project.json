@@ -60,12 +60,14 @@
                 "development": {
                     "browserTarget": "mod10:build:development",
                     "watch": true,
-                    "liveReload": true,
-                    "disableHostCheck": true
+                    "liveReload": true
                 }
             },
             "defaultConfiguration": "development",
             "options": {
+                "browserTarget": "mod10:build:development",
+                "watch": true,
+                "liveReload": true,
                 "host": "0.0.0.0",
                 "port": 4200
             }
