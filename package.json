@@ -17,6 +17,7 @@
     "@angular/cli": "^13.3.2",
     "@angular/compiler": "^13.3.2",
     "@angular/compiler-cli": "^13.3.2",
+    "@angular/core": "^13.3.2",
     "@codebrew/nx-aws-cdk": "^1.0.3",
     "@commitlint/cli": "^16.2.3",
     "@commitlint/config-angular": "^16.2.3",

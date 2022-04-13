@@ -40,6 +40,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@angular/cli", "npm:13.3.2"],\
             ["@angular/compiler", "npm:13.3.2"],\
             ["@angular/compiler-cli", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:13.3.2"],\
+            ["@angular/core", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:13.3.2"],\
             ["@codebrew/nx-aws-cdk", "npm:1.0.3"],\
             ["@commitlint/cli", "npm:16.2.3"],\
             ["@commitlint/config-angular", "npm:16.2.3"],\
@@ -458,6 +459,33 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "@types/angular__compiler",\
             "@types/typescript",\
             "typescript"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@angular/core", [\
+        ["npm:13.3.2", {\
+          "packageLocation": "./.yarn/cache/@angular-core-npm-13.3.2-91b9e9d8cc-39420b321b.zip/node_modules/@angular/core/",\
+          "packageDependencies": [\
+            ["@angular/core", "npm:13.3.2"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:13.3.2", {\
+          "packageLocation": "./.yarn/__virtual__/@angular-core-virtual-9060b5b14a/0/cache/@angular-core-npm-13.3.2-91b9e9d8cc-39420b321b.zip/node_modules/@angular/core/",\
+          "packageDependencies": [\
+            ["@angular/core", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:13.3.2"],\
+            ["@types/rxjs", null],\
+            ["@types/zone.js", null],\
+            ["rxjs", "npm:7.5.5"],\
+            ["tslib", "npm:2.3.1"],\
+            ["zone.js", null]\
+          ],\
+          "packagePeers": [\
+            "@types/rxjs",\
+            "@types/zone.js",\
+            "rxjs",\
+            "zone.js"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -20365,6 +20393,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@angular/cli", "npm:13.3.2"],\
             ["@angular/compiler", "npm:13.3.2"],\
             ["@angular/compiler-cli", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:13.3.2"],\
+            ["@angular/core", "virtual:86962e5f783eb2668aabf3c0a3115a3610d2f26fb774ef7627596e7d466c4716b6e5d6cd53f66fb0c3683d7839189b8d0b65551164b70b4fef05f4ba1b56471b#npm:13.3.2"],\
             ["@codebrew/nx-aws-cdk", "npm:1.0.3"],\
             ["@commitlint/cli", "npm:16.2.3"],\
             ["@commitlint/config-angular", "npm:16.2.3"],\
