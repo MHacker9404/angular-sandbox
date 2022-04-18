@@ -23,5 +23,9 @@ export default class RecipeService {
         return this._recipes.slice();
     }
 
+    public getRecipe = async (index:number):Promise<Recipe> => {
+      return {...this._recipes[index]};
+    }
+
     recipeSelected: EventEmitter<Recipe> = new EventEmitter<Recipe>();
 }
