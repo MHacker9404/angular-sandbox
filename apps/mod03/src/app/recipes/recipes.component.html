@@ -3,9 +3,10 @@
         <nx-apps-recipe-list></nx-apps-recipe-list>
     </div>
     <div class="col-md-7">
-        <nx-apps-recipe-details *ngIf="selectedRecipe; else infoText" [recipe]="selectedRecipe"></nx-apps-recipe-details>
+        <router-outlet></router-outlet>
+        <!-- <nx-apps-recipe-details *ngIf="selectedRecipe; else infoText" [recipe]="selectedRecipe"></nx-apps-recipe-details>
         <ng-template #infoText>
             <p>Please select a recip</p>
-        </ng-template>
+        </ng-template> -->
     </div>
 </div>

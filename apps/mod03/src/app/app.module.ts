@@ -2,15 +2,18 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 // import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
-import {HeaderComponentModule} from './header/header.component';
-import {RecipesComponentModule } from './recipes/recipes.component';
-import {ShoppingListComponentModule } from './shopping-list/shopping-list.component';
+import { HeaderComponentModule } from './header/header.component';
 
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
     declarations: [AppComponent],
-    imports: [BrowserModule, HeaderComponentModule, RecipesComponentModule, ShoppingListComponentModule],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HeaderComponentModule,
+    ],
     providers: [],
     // providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
     bootstrap: [AppComponent],

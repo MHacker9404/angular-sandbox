@@ -5,6 +5,7 @@ import { RecipeListComponentModule } from './recipe-list/recipe-list.component';
 import { RecipeDetailsComponentModule } from './recipe-details/recipe-details.component';
 import Recipe from './recipe.model';
 import RecipeService from './recipe.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
     selector: 'nx-apps-recipes',
@@ -22,7 +23,7 @@ export class RecipesComponent implements OnInit {
 }
 
 @NgModule({
-    imports: [CommonModule, RecipeListComponentModule, RecipeDetailsComponentModule],
+    imports: [CommonModule, RecipeListComponentModule, RecipeDetailsComponentModule, RouterModule],
     declarations: [RecipesComponent],
     exports: [RecipesComponent],
 })

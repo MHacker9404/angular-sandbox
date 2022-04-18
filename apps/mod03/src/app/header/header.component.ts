@@ -1,5 +1,6 @@
-import { Component, OnInit, NgModule, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
     selector: 'nx-apps-header',
@@ -7,19 +8,13 @@ import { CommonModule } from '@angular/common';
     styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-    @Output() featureSelected: EventEmitter<string> = new EventEmitter<string>();
-
     constructor() {}
 
     ngOnInit(): void {}
-
-    onSelect(feature: string) {
-        this.featureSelected.emit(feature);
-    }
 }
 
 @NgModule({
-    imports: [CommonModule],
+    imports: [CommonModule, RouterModule],
     declarations: [HeaderComponent],
     exports: [HeaderComponent],
 })

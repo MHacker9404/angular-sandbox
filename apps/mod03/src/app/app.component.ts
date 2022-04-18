@@ -6,10 +6,5 @@ import { Component } from '@angular/core';
     styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-    feature: string = 'recipe';
     constructor() { }
-
-    onFeatureSelected = (feature: string) => {
-        this.feature = feature;
-    }
 }

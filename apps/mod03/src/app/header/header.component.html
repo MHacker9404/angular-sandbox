@@ -1,32 +1,25 @@
 <nav class="navbar navbar-light navbar-expand-lg navigation-clean-button">
     <div class="container">
         <a class="navbar-brand" href="#">Recipe Book</a>
-        <button
-            class="navbar-toggler"
-            data-bs-toggle="collapse"
-            data-bs-target="#navcol-1"
-        >
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1">
             <span class="visually-hidden">Toggle navigation</span>
             <span class="navbar-toggler-icon"></span>
         </button>
         <div id="navcol-1" class="collapse navbar-collapse">
             <ul class="navbar-nav me-auto">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#" (click)="onSelect('recipe')">Recipes</a>
+                <li class="nav-item" routerLinkActive="router-link-active">
+                    <a class="nav-link active" routerLink="/recipes">Recipes</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" (click)="onSelect('shopping')">Shopping List</a>
+                <li class="nav-item" routerLinkActive="router-link-active">
+                    <a class="nav-link" [routerLink]="['/shopping-list']">Shopping List</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a
-                        class="dropdown-toggle nav-link"
-                        aria-expanded="false"
-                        data-bs-toggle="dropdown"
-                        href="#"
-                        >Manage<span class="caret"></span></a>
+                    <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown"
+                        >Manage<span class="caret"></span
+                    ></a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Save Data</a>
-                        <a class="dropdown-item" href="#">Fetch Data</a>
+                        <a class="dropdown-item">Save Data</a>
+                        <a class="dropdown-item">Fetch Data</a>
                     </div>
                 </li>
             </ul>
