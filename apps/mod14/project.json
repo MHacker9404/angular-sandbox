@@ -1,21 +1,21 @@
 {
     "projectType": "application",
-    "root": "apps/mod12",
-    "sourceRoot": "apps/mod12/src",
+    "root": "apps/mod14",
+    "sourceRoot": "apps/mod14/src",
     "prefix": "nx-apps",
     "targets": {
         "build": {
             "executor": "@nrwl/angular:webpack-browser",
             "outputs": ["{options.outputPath}"],
             "options": {
-                "outputPath": "dist/apps/mod12",
-                "index": "apps/mod12/src/index.html",
-                "main": "apps/mod12/src/main.ts",
-                "polyfills": "apps/mod12/src/polyfills.ts",
-                "tsConfig": "apps/mod12/tsconfig.app.json",
+                "outputPath": "dist/apps/mod14",
+                "index": "apps/mod14/src/index.html",
+                "main": "apps/mod14/src/main.ts",
+                "polyfills": "apps/mod14/src/polyfills.ts",
+                "tsConfig": "apps/mod14/tsconfig.app.json",
                 "inlineStyleLanguage": "scss",
-                "assets": ["apps/mod12/src/favicon.ico", "apps/mod12/src/assets"],
-                "styles": ["apps/mod12/src/styles.scss"],
+                "assets": ["apps/mod14/src/favicon.ico", "apps/mod14/src/assets"],
+                "styles": ["apps/mod14/src/styles.scss"],
                 "scripts": []
             },
             "configurations": {
@@ -34,8 +34,8 @@
                     ],
                     "fileReplacements": [
                         {
-                            "replace": "apps/mod12/src/environments/environment.ts",
-                            "with": "apps/mod12/src/environments/environment.prod.ts"
+                            "replace": "apps/mod14/src/environments/environment.ts",
+                            "with": "apps/mod14/src/environments/environment.prod.ts"
                         }
                     ],
                     "outputHashing": "all"
@@ -55,17 +55,17 @@
             "executor": "@nrwl/angular:webpack-server",
             "configurations": {
                 "production": {
-                    "browserTarget": "mod12:build:production"
+                    "browserTarget": "mod14:build:production"
                 },
                 "development": {
-                    "browserTarget": "mod12:build:development",
+                    "browserTarget": "mod14:build:development",
                     "watch": true,
                     "liveReload": true
                 }
             },
             "defaultConfiguration": "development",
             "options": {
-                "browserTarget": "mod12:build:development",
+                "browserTarget": "mod14:build:development",
                 "watch": true,
                 "liveReload": true,
                 "host": "0.0.0.0",
@@ -75,13 +75,13 @@
         "extract-i18n": {
             "executor": "@angular-devkit/build-angular:extract-i18n",
             "options": {
-                "browserTarget": "mod12:build"
+                "browserTarget": "mod14:build"
             }
         },
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "options": {
-                "lintFilePatterns": ["apps/mod12/src/**/*.ts", "apps/mod12/src/**/*.html"]
+                "lintFilePatterns": ["apps/mod14/src/**/*.ts", "apps/mod14/src/**/*.html"]
             }
         }
     },
