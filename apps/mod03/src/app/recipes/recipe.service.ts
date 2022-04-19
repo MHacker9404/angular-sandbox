@@ -1,9 +1,13 @@
-import {Injectable, EventEmitter} from '@angular/core';
+import { Injectable } from '@angular/core';
 import Recipe from './recipe.model';
 import Ingredient from '../shared/ingredient.model';
+import { Subject } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export default class RecipeService {
+    // recipeSelected: EventEmitter<Recipe> = new EventEmitter<Recipe>();
+    recipeSelected: Subject<Recipe> = new Subject<Recipe>();
+
     private _recipes: Recipe[] = [
         new Recipe(
             'Test',
@@ -23,9 +27,7 @@ export default class RecipeService {
         return this._recipes.slice();
     }
 
-    public getRecipe = async (index:number):Promise<Recipe> => {
-      return {...this._recipes[index]};
-    }
-
-    recipeSelected: EventEmitter<Recipe> = new EventEmitter<Recipe>();
+    public getRecipe = async (index: number): Promise<Recipe> => {
+        return { ...this._recipes[index] };
+    };
 }

@@ -21,7 +21,7 @@ export class RecipeListComponent implements OnInit {
   }
 
   public onNewRecipe = async (): Promise<void> => {
-    this._router.navigate(['new'], { relativeTo: this._route);
+      this._router.navigate(['new'], { relativeTo: this._route });
   };
 }
 

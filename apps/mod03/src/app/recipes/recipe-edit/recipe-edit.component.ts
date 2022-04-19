@@ -1,7 +1,6 @@
 import { Component, OnInit, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Params } from '@angular/router';
-import { runInThisContext } from 'vm';
 
 @Component({
   selector: 'nx-apps-recipe-edit',
@@ -10,7 +9,7 @@ import { runInThisContext } from 'vm';
 })
 export class RecipeEditComponent implements OnInit {
   id: number | undefined | null;
-  editMode: boolean = false;
+  editMode = false;
 
   constructor(private _route: ActivatedRoute) {
     this.id = +this._route.snapshot.params['id'];
