@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+                <div formGroupName="userData">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" formControlName="userName" class="form-control">
+                        <span *ngIf="formGroup.get('userData.userName')?.touched && !formGroup.get('userData.userName')?.valid" class="help-block"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">email</label>
+                        <input type="text" id="email" formControlName="email" class="form-control">
+                        <span *ngIf="formGroup.get('userData.email')?.touched && !formGroup.get('userData.email')?.valid" class="help-block">This field is required</span>
+                    </div>
+                </div>
+                <div class="radio" *ngFor="let gender of genders">
+                    <label>
+                        <input type="radio" formControlName="gender" [value]="gender">{{ gender }}
+                    </label>
+                </div>
+                <div formArrayName="hobbies">
+                    <h4>Hobbies</h4>
+                    <button class="btn btn-primary" type="button" (click)="onAddHobby()">Add Hobby</button>
+                    <div class="form-group" *ngFor="let hobby of hobbies(); let index = index">
+                        <input type="text" class="form-control" [formControlName]="index">
+                    </div>
+                </div>
+                <span *ngIf="formGroup.touched && !formGroup.valid" class="help-block">Please enter valid data</span>
+                <button class="btn btn-primary" type="submit" [disabled]="!formGroup.valid">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
