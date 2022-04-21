@@ -10,7 +10,7 @@ import { Subscription } from 'rxjs';
 @Component({
     selector: 'nx-apps-shopping-list',
     templateUrl: './shopping-list.component.html',
-    styleUrls: ['./shopping-list.component.scss'],
+    styleUrls: ['./shopping-list.component.scss']
 })
 export class ShoppingListComponent implements OnInit, OnDestroy {
     ingredients: Ingredient[] = [];
@@ -28,11 +28,15 @@ export class ShoppingListComponent implements OnInit, OnDestroy {
     ngOnDestroy(): void {
         this._subscription?.unsubscribe();
     }
+
+    onEditItem = async (index: number) => {
+        this._shoppingListSvc.startedEditing.next(index);
+    };
 }
 
 @NgModule({
     imports: [CommonModule, FormsModule, ShoppingEditComponentModule],
     declarations: [ShoppingListComponent],
-    exports: [ShoppingListComponent],
+    exports: [ShoppingListComponent]
 })
 export class ShoppingListComponentModule {}
