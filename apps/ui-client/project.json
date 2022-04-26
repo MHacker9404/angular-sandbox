@@ -1,0 +1,63 @@
+{
+    "root": "apps/ui-client",
+    "sourceRoot": "apps/ui-client/src",
+    "projectType": "application",
+    "targets": {
+        "build": {
+            "executor": "@nrwl/node:webpack",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/apps/ui-client",
+                "main": "apps/ui-client/src/main.ts",
+                "tsConfig": "apps/ui-client/tsconfig.app.json",
+                "assets": ["apps/ui-client/src/assets"],
+            },
+            "configurations": {
+                "development": {
+                    "optimization": false,
+                    "extractLicenses": true,
+                    "inspect": false,
+                    "fileReplacements": [
+                        {
+                            "replace": "apps/ui-client/src/environments/environment.ts",
+                            "with": "apps/ui-client/src/environments/environment.dev.ts"
+                        }
+                    ]
+                },
+                "production": {
+                    "optimization": true,
+                    "extractLicenses": true,
+                    "inspect": false,
+                    "fileReplacements": [
+                        {
+                            "replace": "apps/ui-client/src/environments/environment.ts",
+                            "with": "apps/ui-client/src/environments/environment.prod.ts"
+                        }
+                    ]
+                }
+            }
+        },
+        "serve": {
+            "executor": "@nrwl/node:node",
+            "options": {
+                "buildTarget": "ui-client:build"
+            }
+        },
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "outputs": ["{options.outputFile}"],
+            "options": {
+                "lintFilePatterns": ["apps/ui-client/**/*.ts"]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/apps/ui-client"],
+            "options": {
+                "jestConfig": "apps/ui-client/jest.config.ts",
+                "passWithNoTests": true
+            }
+        }
+    },
+    "tags": []
+}
