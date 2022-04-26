@@ -8,6 +8,10 @@
         "mod08": "apps/mod08",
         "mod10": "apps/mod10",
         "mod12": "apps/mod12",
-        "mod14": "apps/mod14"
+        "mod14": "apps/mod14",
+        "unit-testing-jest": "apps/unit-testing-jest",
+        "unit-testing-jest-e2e": "apps/unit-testing-jest-e2e",
+        "unit-testing-karma": "apps/unit-testing-karma",
+        "unit-testing-karma-e2e": "apps/unit-testing-karma-e2e"
     }
 }

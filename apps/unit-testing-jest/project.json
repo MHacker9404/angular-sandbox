@@ -1,0 +1,97 @@
+{
+    "projectType": "application",
+    "root": "apps/unit-testing-jest",
+    "sourceRoot": "apps/unit-testing-jest/src",
+    "prefix": "nx-apps",
+    "targets": {
+        "build": {
+            "executor": "@nrwl/angular:webpack-browser",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/apps/unit-testing-jest",
+                "index": "apps/unit-testing-jest/src/index.html",
+                "main": "apps/unit-testing-jest/src/main.ts",
+                "polyfills": "apps/unit-testing-jest/src/polyfills.ts",
+                "tsConfig": "apps/unit-testing-jest/tsconfig.app.json",
+                "inlineStyleLanguage": "scss",
+                "assets": ["apps/unit-testing-jest/src/favicon.ico", "apps/unit-testing-jest/src/assets"],
+                "styles": ["apps/unit-testing-jest/src/styles.scss"],
+                "scripts": []
+            },
+            "configurations": {
+                "production": {
+                    "budgets": [
+                        {
+                            "type": "initial",
+                            "maximumWarning": "500kb",
+                            "maximumError": "1mb"
+                        },
+                        {
+                            "type": "anyComponentStyle",
+                            "maximumWarning": "2kb",
+                            "maximumError": "4kb"
+                        }
+                    ],
+                    "fileReplacements": [
+                        {
+                            "replace": "apps/unit-testing-jest/src/environments/environment.ts",
+                            "with": "apps/unit-testing-jest/src/environments/environment.prod.ts"
+                        }
+                    ],
+                    "outputHashing": "all"
+                },
+                "development": {
+                    "buildOptimizer": false,
+                    "optimization": false,
+                    "vendorChunk": true,
+                    "extractLicenses": false,
+                    "sourceMap": true,
+                    "namedChunks": true
+                }
+            },
+            "defaultConfiguration": "development"
+        },
+        "serve": {
+            "executor": "@nrwl/angular:webpack-server",
+            "configurations": {
+                "production": {
+                    "browserTarget": "unit-testing-jest:build:production"
+                },
+                "development": {
+                    "browserTarget": "unit-testing-jest:build:development",
+                    "watch": true,
+                    "liveReload": true
+                }
+            },
+            "defaultConfiguration": "development",
+            "options": {
+                "browserTarget": "unit-testing-jest:build:development",
+                "watch": true,
+                "liveReload": true,
+                "host": "0.0.0.0",
+                "port": 4200
+            }
+        },
+        "extract-i18n": {
+            "executor": "@angular-devkit/build-angular:extract-i18n",
+            "options": {
+                "browserTarget": "unit-testing-jest:build"
+            }
+        },
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "options": {
+                "lintFilePatterns": ["apps/unit-testing-jest/src/**/*.ts", "apps/unit-testing-jest/src/**/*.html"]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/apps/unit-testing-jest"],
+            "options": {
+                "jestConfig": "apps/unit-testing-jest/jest.config.ts",
+                "passWithNoTests": true
+            }
+        }
+    },
+    "tags": []
+}
