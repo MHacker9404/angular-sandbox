@@ -10,7 +10,7 @@
                 "outputPath": "dist/apps/ui-client",
                 "main": "apps/ui-client/src/main.ts",
                 "tsConfig": "apps/ui-client/tsconfig.app.json",
-                "assets": ["apps/ui-client/src/assets"],
+                "assets": ["apps/ui-client/src/assets"]
             },
             "configurations": {
                 "development": {
