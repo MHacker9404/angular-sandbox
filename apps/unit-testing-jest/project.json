@@ -47,6 +47,15 @@
                     "extractLicenses": false,
                     "sourceMap": true,
                     "namedChunks": true
+                },
+                "test": {
+                    "buildOptimizer": false,
+                    "optimization": false,
+                    "vendorChunk": true,
+                    "extractLicenses": false,
+                    "sourceMap": true,
+                    "namedChunks": true,
+                    "tsConfig": "apps/unit-testing-jest/tsconfig.spec.json"
                 }
             },
             "defaultConfiguration": "development"
@@ -88,6 +97,7 @@
             "executor": "@nrwl/jest:jest",
             "outputs": ["coverage/apps/unit-testing-jest"],
             "options": {
+                "browserTarget": "unit-testing-jest:build:test",
                 "jestConfig": "apps/unit-testing-jest/jest.config.ts",
                 "passWithNoTests": true
             }
