@@ -15,6 +15,7 @@
         "skipDefaultLibCheck": true,
         "resolveJsonModule": true,
         "baseUrl": ".",
+        "typeRoots": ["node_modules/@types"],
         "paths": {}
     },
     "exclude": ["node_modules", "tmp"]
