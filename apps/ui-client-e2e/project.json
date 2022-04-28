@@ -6,10 +6,13 @@
         "e2e": {
             "executor": "@nrwl/cypress:cypress",
             "options": {
-                "cypressConfig": "apps/ui-client-e2e/cypress.json",
-                "devServerTarget": "ui-client:serve:development"
+                "cypressConfig": "apps/ui-client-e2e/cypress.json"
             },
+            "defaultConfiguration": "development",
             "configurations": {
+                "development": {
+                    "devServerTarget": "ui-client:serve:development"
+                },
                 "production": {
                     "devServerTarget": "ui-client:serve:production"
                 }
