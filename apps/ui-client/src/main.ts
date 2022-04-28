@@ -1,18 +1,13 @@
-/**
- * This is not a production server yet!
- * This is only a minimal backend to get started.
- */
+import { enableProdMode } from '@angular/core';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-import * as express from 'express';
+import { AppModule } from './app/app.module';
+import { environment } from './environments/environment';
 
-const app = express();
+if (environment.production) {
+    enableProdMode();
+}
 
-app.get('/api', (req, res) => {
-    res.send({ message: 'Welcome to UiClient!' });
-});
-
-const port = process.env.port || 3333;
-const server = app.listen(port, () => {
-    console.log(`Listening at http://localhost:${port}/api`);
-});
-server.on('error', console.error);
+platformBrowserDynamic()
+    .bootstrapModule(AppModule)
+    .catch((err) => console.error(err));

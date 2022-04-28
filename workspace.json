@@ -2,6 +2,7 @@
     "version": 2,
     "projects": {
         "api-server": "apps/api-server",
-        "ui-client": "apps/ui-client"
+        "ui-client": "apps/ui-client",
+        "ui-client-e2e": "apps/ui-client-e2e"
     }
 }
