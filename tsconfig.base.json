@@ -16,7 +16,9 @@
         "resolveJsonModule": true,
         "baseUrl": ".",
         "typeRoots": ["node_modules/@types"],
-        "paths": {}
+        "paths": {
+            "@nx-apps/server": ["libs/server/src/index.ts"]
+        }
     },
     "exclude": ["node_modules", "tmp"]
 }
