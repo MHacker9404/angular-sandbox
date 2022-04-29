@@ -1,6 +1,7 @@
 import { CalculatorService } from './calculator.service';
 import { LoggerService } from './logger.service';
 import { TestBed } from '@angular/core/testing';
+import "jest";
 
 describe('CalculatorService', () => {
     let calculator: CalculatorService, loggerSpy: any;
@@ -8,7 +9,7 @@ describe('CalculatorService', () => {
     beforeEach(() => {
         console.log('Calling beforeEach');
 
-        loggerSpy = jasmine.createSpyObj('LoggerService', ['log']);
+        loggerSpy = jest.spyOn(LoggerService, 'log');
 
         TestBed.configureTestingModule({
             providers: [

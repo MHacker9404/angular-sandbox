@@ -1,12 +1,10 @@
-import { HttpErrorResponse } from '@angular/common/http';
-import {
-    HttpClientTestingModule,
-    HttpTestingController
-} from '@angular/common/http/testing';
-import { TestBed } from '@angular/core/testing';
-import { COURSES, findLessonsForCourse } from '@nx-apps/server';
 import { Course } from '../model/course';
+import { COURSES, findLessonsForCourse } from '@nx-apps/server';
 import { CoursesService } from './courses.service';
+import { fail } from 'assert';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { HttpErrorResponse } from '@angular/common/http';
+import { TestBed } from '@angular/core/testing';
 
 describe('CoursesService', () => {
     let coursesService: CoursesService,
@@ -23,14 +21,14 @@ describe('CoursesService', () => {
     });
 
     it('should retrieve all courses', () => {
-        coursesService.findAllCourses().subscribe((courses) => {
+        coursesService.findAllCourses().subscribe((courses: Course[]) => {
             expect(courses).toBeTruthy('No courses returned');
 
             expect(courses.length).toBe(12, 'incorrect number of courses');
 
             const course = courses.find((course) => course.id == 12);
 
-            expect(course.titles.description).toBe('Angular Testing Course');
+            expect(course?.titles.description).toBe('Angular Testing Course');
         });
 
         const req = httpTestingController.expectOne('/api/courses');
@@ -66,7 +64,9 @@ describe('CoursesService', () => {
 
         expect(req.request.method).toEqual('PUT');
 
-        expect(req.request.body.titles.description).toEqual( changes.titles.description as string);
+        expect(req.request.body.titles.description).toEqual(
+            changes.titles?.description as string
+        );
 
         req.flush({
             ...COURSES[12],

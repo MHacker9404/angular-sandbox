@@ -5,11 +5,11 @@ import { setTimeout } from 'timers';
 export function searchLessons(req: Request, res: Response) {
     const queryParams = req.query;
 
-    const courseId = parseInt(queryParams.courseId as string),
-        filter = (queryParams.filter as string) || '',
-        sortOrder = queryParams.sortOrder,
-        pageNumber = parseInt(queryParams.pageNumber as string) || 0,
-        pageSize = parseInt(queryParams.pageSize as string);
+    const courseId = parseInt(queryParams['courseId'] as string),
+        filter = (queryParams['filter'] as string) || '',
+        sortOrder = queryParams['sortOrder'],
+        pageNumber = parseInt(queryParams['pageNumber'] as string) || 0,
+        pageSize = parseInt(queryParams['pageSize'] as string);
 
     let lessons = Object.values(LESSONS)
         .filter((lesson) => lesson.courseId == courseId)
