@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, resolveForwardRef } from '@angular/core';
 
 @Component({
     selector: 'nx-apps-root',
@@ -6,10 +6,16 @@ import { Component } from '@angular/core';
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+    appStatus = new Promise((resolve, rej) => {
+        setTimeout(() => {
+            resolve('stable')
+         }, 2000);
+    });
+
     servers = [
         {
             instanceType: 'medium',
-            name: 'Production Server',
+            name: 'Production',
             status: 'stable',
             started: new Date(15, 1, 2017)
         },
@@ -32,6 +38,18 @@ export class AppComponent {
             started: new Date(15, 1, 2017)
         }
     ];
+
+    filteredStatus = '';
+
+    onAddServer = async () => {
+        this.servers.push({
+            instanceType: 'small',
+            name: 'New Server',
+            status: 'offline',
+            started: new Date(15, 1, 2017)
+        })
+     };
+
     getStatusClasses(server: { instanceType: string, name: string, status: string, started: Date; }) {
         return {
             'list-group-item-success': server.status === 'stable',

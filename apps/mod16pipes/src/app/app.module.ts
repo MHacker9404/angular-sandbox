@@ -3,10 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
+import { ShortenPipe } from './shorten.pipe';
+import { FormsModule } from '@angular/forms';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
-    declarations: [AppComponent],
-    imports: [BrowserModule, RouterModule.forRoot([], { initialNavigation: 'enabledBlocking' })],
+    declarations: [AppComponent, ShortenPipe, FilterPipe],
+    imports: [BrowserModule, RouterModule.forRoot([], { initialNavigation: 'enabledBlocking' }), FormsModule],
     providers: [],
     bootstrap: [AppComponent]
 })

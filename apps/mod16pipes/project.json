@@ -52,16 +52,25 @@
             "defaultConfiguration": "development"
         },
         "serve": {
-            "executor": "@angular-devkit/build-angular:dev-server",
+            "executor": "@nrwl/angular:webpack-server",
             "configurations": {
                 "production": {
                     "browserTarget": "mod16pipes:build:production"
                 },
                 "development": {
-                    "browserTarget": "mod16pipes:build:development"
+                    "browserTarget": "mod16pipes:build:development",
+                    "watch": true,
+                    "liveReload": true
                 }
             },
-            "defaultConfiguration": "development"
+            "defaultConfiguration": "development",
+            "options": {
+                "browserTarget": "mod16pipes:build:development",
+                "watch": true,
+                "liveReload": true,
+                "host": "0.0.0.0",
+                "port": 4200
+            }
         },
         "extract-i18n": {
             "executor": "@angular-devkit/build-angular:extract-i18n",
