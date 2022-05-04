@@ -1,0 +1,97 @@
+{
+    "projectType": "application",
+    "root": "apps/mod17-http",
+    "sourceRoot": "apps/mod17-http/src",
+    "prefix": "nx-apps",
+    "targets": {
+        "build": {
+            "executor": "@angular-devkit/build-angular:browser",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/apps/mod17-http",
+                "index": "apps/mod17-http/src/index.html",
+                "main": "apps/mod17-http/src/main.ts",
+                "polyfills": "apps/mod17-http/src/polyfills.ts",
+                "tsConfig": "apps/mod17-http/tsconfig.app.json",
+                "inlineStyleLanguage": "scss",
+                "assets": ["apps/mod17-http/src/favicon.ico", "apps/mod17-http/src/assets"],
+                "styles": ["apps/mod17-http/src/styles.scss"],
+                "scripts": []
+            },
+            "configurations": {
+                "production": {
+                    "budgets": [
+                        {
+                            "type": "initial",
+                            "maximumWarning": "500kb",
+                            "maximumError": "1mb"
+                        },
+                        {
+                            "type": "anyComponentStyle",
+                            "maximumWarning": "2kb",
+                            "maximumError": "4kb"
+                        }
+                    ],
+                    "fileReplacements": [
+                        {
+                            "replace": "apps/mod17-http/src/environments/environment.ts",
+                            "with": "apps/mod17-http/src/environments/environment.prod.ts"
+                        }
+                    ],
+                    "outputHashing": "all"
+                },
+                "development": {
+                    "buildOptimizer": false,
+                    "optimization": false,
+                    "vendorChunk": true,
+                    "extractLicenses": false,
+                    "sourceMap": true,
+                    "namedChunks": true
+                }
+            },
+            "defaultConfiguration": "development"
+        },
+        "serve": {
+            "executor": "@angular-devkit/build-angular:dev-server",
+            "configurations": {
+                "production": {
+                    "browserTarget": "mod17-http:build:production"
+                },
+                "development": {
+                    "browserTarget": "mod17-http:build:development",
+                    "watch": true,
+                    "liveReload": true
+                }
+            },
+            "defaultConfiguration": "development",
+            "options": {
+                "browserTarget": "mod17-http:build:development",
+                "watch": true,
+                "liveReload": true,
+                "host": "0.0.0.0",
+                "port": 4200
+            }
+        },
+        "extract-i18n": {
+            "executor": "@angular-devkit/build-angular:extract-i18n",
+            "options": {
+                "browserTarget": "mod17-http:build"
+            }
+        },
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "options": {
+                "lintFilePatterns": ["apps/mod17-http/**/*.ts", "apps/mod17-http/**/*.html"]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/apps/mod17-http"],
+            "options": {
+                "jestConfig": "apps/mod17-http/jest.config.ts",
+                "passWithNoTests": true
+            }
+        }
+    },
+    "tags": []
+}

@@ -10,6 +10,8 @@
         "mod12": "apps/mod12",
         "mod14": "apps/mod14",
         "mod16pipes": "apps/mod16pipes",
+        "mod17-http": "apps/mod17-http",
+        "mod17-http-e2e": "apps/mod17-http-e2e",
         "unit-testing-jest": "apps/unit-testing-jest",
         "unit-testing-jest-e2e": "apps/unit-testing-jest-e2e",
         "unit-testing-karma": "apps/unit-testing-karma",

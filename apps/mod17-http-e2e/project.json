@@ -1,0 +1,28 @@
+{
+    "root": "apps/mod17-http-e2e",
+    "sourceRoot": "apps/mod17-http-e2e/src",
+    "projectType": "application",
+    "targets": {
+        "e2e": {
+            "executor": "@nrwl/cypress:cypress",
+            "options": {
+                "cypressConfig": "apps/mod17-http-e2e/cypress.json",
+                "devServerTarget": "mod17-http:serve:development"
+            },
+            "configurations": {
+                "production": {
+                    "devServerTarget": "mod17-http:serve:production"
+                }
+            }
+        },
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "outputs": ["{options.outputFile}"],
+            "options": {
+                "lintFilePatterns": ["apps/mod17-http-e2e/**/*.{js,ts}"]
+            }
+        }
+    },
+    "tags": [],
+    "implicitDependencies": ["mod17-http"]
+}
