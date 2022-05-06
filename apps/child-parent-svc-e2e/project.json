@@ -1,16 +1,16 @@
 {
-    "sourceRoot": "apps/mod17-http-e2e/src",
+    "sourceRoot": "apps/child-parent-svc-e2e/src",
     "projectType": "application",
     "targets": {
         "e2e": {
             "executor": "@nrwl/cypress:cypress",
             "options": {
-                "cypressConfig": "apps/mod17-http-e2e/cypress.json",
-                "devServerTarget": "mod17-http:serve:development"
+                "cypressConfig": "apps/child-parent-svc-e2e/cypress.json",
+                "devServerTarget": "child-parent-svc:serve:development"
             },
             "configurations": {
                 "production": {
-                    "devServerTarget": "mod17-http:serve:production"
+                    "devServerTarget": "child-parent-svc:serve:production"
                 }
             }
         },
@@ -18,10 +18,10 @@
             "executor": "@nrwl/linter:eslint",
             "outputs": ["{options.outputFile}"],
             "options": {
-                "lintFilePatterns": ["apps/mod17-http-e2e/**/*.{js,ts}"]
+                "lintFilePatterns": ["apps/child-parent-svc-e2e/**/*.{js,ts}"]
             }
         }
     },
     "tags": [],
-    "implicitDependencies": ["mod17-http"]
+    "implicitDependencies": ["child-parent-svc"]
 }

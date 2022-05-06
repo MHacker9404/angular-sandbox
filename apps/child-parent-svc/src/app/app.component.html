@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col">
+    <button class="btn btn-primary" (click)="showChild()">Show Child</button>
+    <hr>
+    <span>{{result}}</span>
+  </div>
+</div>
+
+<div class="row" *ngIf="!isHidden">
+  <div class="col">
+    <app-griffin-status></app-griffin-status>
+  </div>
+</div>
+

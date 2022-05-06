@@ -1,6 +1,5 @@
 {
     "projectType": "application",
-    "root": "apps/unit-testing-jest",
     "sourceRoot": "apps/unit-testing-jest/src",
     "prefix": "nx-apps",
     "targets": {

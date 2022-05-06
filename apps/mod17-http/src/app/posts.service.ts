@@ -24,4 +24,12 @@ export class PostsService {
         // .subscribe((posts: any[]) => { });
         return source$;
     };
+
+    deletePosts = () => {
+        const source$ = this._http.delete<Post[]>('https://jsonplaceholder.typicode.com/posts')
+            .pipe(map(posts => posts.map((post: Post) => ({ id: post.id, title: post.title, body: post.body }))));
+        // return lastValueFrom(source$);
+        // .subscribe((posts: any[]) => { });
+        return source$;
+    };
 }

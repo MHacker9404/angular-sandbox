@@ -1,5 +1,4 @@
 {
-    "root": "apps/unit-testing-jest-e2e",
     "sourceRoot": "apps/unit-testing-jest-e2e/src",
     "projectType": "application",
     "targets": {

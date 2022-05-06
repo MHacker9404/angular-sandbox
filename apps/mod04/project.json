@@ -1,6 +1,5 @@
 {
     "projectType": "application",
-    "root": "apps/mod04",
     "sourceRoot": "apps/mod04/src",
     "prefix": "nx-apps",
     "targets": {

@@ -1,6 +1,8 @@
 {
     "version": 2,
     "projects": {
+        "child-parent-svc": "apps/child-parent-svc",
+        "child-parent-svc-e2e": "apps/child-parent-svc-e2e",
         "mod02": "apps/mod02",
         "mod03": "apps/mod03",
         "mod04": "apps/mod04",

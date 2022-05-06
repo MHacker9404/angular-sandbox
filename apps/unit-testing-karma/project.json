@@ -1,6 +1,5 @@
 {
     "projectType": "application",
-    "root": "apps/unit-testing-karma",
     "sourceRoot": "apps/unit-testing-karma/src",
     "prefix": "nx-apps",
     "targets": {

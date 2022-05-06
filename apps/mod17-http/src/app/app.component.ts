@@ -22,11 +22,14 @@ export class AppComponent implements OnInit {
     }
 
     onFetchPosts = async () => {
-        this._postSvc.fetchPosts().subscribe(posts => this.loadedPosts = [...posts]);
+        this._postSvc.fetchPosts().subscribe({
+            next: (posts) => this.loadedPosts = [...posts],
+            error: () => { },
+            complete: () => { }
+        });
     };
 
     onClearPosts() {
-        // Send Http request
+        this._postSvc.deletePosts().subscribe(posts => this.loadedPosts = [...posts]);
     }
-
 }
