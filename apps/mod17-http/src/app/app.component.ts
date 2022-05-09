@@ -9,23 +9,49 @@ import { PostsService } from './posts.service';
 })
 export class AppComponent implements OnInit {
     loadedPosts: Post[] = [];
+    isFetching = false;
+    error: string | undefined;
 
     constructor(private _postSvc: PostsService) { }
 
     ngOnInit() {
-        this._postSvc.fetchPosts().subscribe(posts => this.loadedPosts = [...posts]);
+        this.isFetching = true;
+        this._postSvc.fetchPosts().subscribe(posts => {
+            this.loadedPosts = [...posts];
+            this.isFetching = false;
+        }
+        );
     }
 
     onCreatePost = async (form: { title: string; content: string; }) => {
+        this.isFetching = true;
         this._postSvc.createAndStorePost(form.title, form.content);
-        this._postSvc.fetchPosts().subscribe(posts => this.loadedPosts = [...posts]);
-    }
+        this._postSvc.fetchPosts().subscribe({
+            next: (posts: Post[]) => {
+                this.loadedPosts = [...posts];
+                this.isFetching = false;
+            },
+            error: (error) => {
+                console.error(error);
+                this.error = error;
+            },
+            complete: () => {
+                this.isFetching = false;
+            }
+        });
+    };
 
     onFetchPosts = async () => {
+        this.isFetching = true;
         this._postSvc.fetchPosts().subscribe({
             next: (posts) => this.loadedPosts = [...posts],
-            error: () => { },
-            complete: () => { }
+            error: (error) => {
+                console.error(error);
+                this.error = error;
+            },
+            complete: () => {
+                this.isFetching = false;
+            }
         });
     };
 
