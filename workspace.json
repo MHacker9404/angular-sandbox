@@ -1,4 +1,7 @@
 {
-  "version": 2,
-  "projects": {}
+    "version": 2,
+    "projects": {
+        "select-box": "apps/select-box",
+        "select-box-e2e": "apps/select-box-e2e"
+    }
 }
