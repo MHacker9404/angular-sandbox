@@ -1,4 +1,6 @@
 {
-  "version": 2,
-  "projects": {}
+    "version": 2,
+    "projects": {
+        "gary-ngxs": "apps/gary-ngxs"
+    }
 }

@@ -3559,6 +3559,44 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@ngxs/devtools-plugin@npm:^3.7.5":
+  version: 3.7.5
+  resolution: "@ngxs/devtools-plugin@npm:3.7.5"
+  dependencies:
+    tslib: ^1.9.0
+  peerDependencies:
+    "@angular/core": ">=6.1.0 <15.0.0"
+    "@ngxs/store": ^3.7.5 || ^3.7.5-dev
+    rxjs: ">=6.5.5"
+  checksum: 4f1c85e08ba55e4d1e63b1c3abac8aa670d615c73d79a651d1ecba6eba8ba91a42ed5d0ac8af8e6a362698ea6d94b61b20575b5ac3304861d83029692db0c2a8
+  languageName: node
+  linkType: hard
+
+"@ngxs/logger-plugin@npm:^3.7.5":
+  version: 3.7.5
+  resolution: "@ngxs/logger-plugin@npm:3.7.5"
+  dependencies:
+    tslib: ^1.9.0
+  peerDependencies:
+    "@angular/core": ">=6.1.0 <15.0.0"
+    "@ngxs/store": ^3.7.5 || ^3.7.5-dev
+    rxjs: ">=6.5.5"
+  checksum: 69831009a20df6cfe8880c5cbedb668e3e9d348937bbc10a84527712ded760653459b8eb05c1d56431b3e5a1b9ed45cac63efe5f19bdecb4eb0850e6dc0b01e0
+  languageName: node
+  linkType: hard
+
+"@ngxs/store@npm:^3.7.5":
+  version: 3.7.5
+  resolution: "@ngxs/store@npm:3.7.5"
+  dependencies:
+    tslib: ^1.9.0
+  peerDependencies:
+    "@angular/core": ">=6.1.0 <15.0.0"
+    rxjs: ">=6.5.5"
+  checksum: cec41d5da66b04ff413a64a73a8406d5e4356d68f3f25dea25f5e8eb874b6ac688844b6c31638710874690bb988f2d849d32a394479def921678f7ce5bf7f414
+  languageName: node
+  linkType: hard
+
 "@nodelib/fs.scandir@npm:2.1.5":
   version: 2.1.5
   resolution: "@nodelib/fs.scandir@npm:2.1.5"
@@ -11893,6 +11931,9 @@ __metadata:
     "@angular/router": ~14.2.4
     "@babel/core": ^7.19.3
     "@babel/preset-env": ^7.19.3
+    "@ngxs/devtools-plugin": ^3.7.5
+    "@ngxs/logger-plugin": ^3.7.5
+    "@ngxs/store": ^3.7.5
     "@nrwl/angular": 14.8.2
     "@nrwl/cli": 14.8.2
     "@nrwl/cypress": 14.8.2
