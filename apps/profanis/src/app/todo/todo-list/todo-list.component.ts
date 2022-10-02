@@ -2,14 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { MatCheckboxChange } from '@angular/material/checkbox';
 import { Select, Store } from '@ngxs/store';
 import { Observable, of } from 'rxjs';
-import { AddItemAction, ToggleItemAction } from '../todo.actions';
-import { TodoSelectors } from '../todo.selectors';
+import { TodoSelectors } from '../store/todo.selectors';
+import { TodoFacade } from '../todo.facade';
 import { TodoModel } from '../types/todo';
 
 @Component({
     selector: 'nx-apps-todo',
     templateUrl: './todo-list.component.html',
-    styleUrls: ['./todo-list.component.scss']
+    styleUrls: ['./todo-list.component.scss'],
+    providers: [TodoFacade]
 })
 export class TodoListComponent implements OnInit {
     @Select(TodoSelectors.todoItems) todoItems$!: Observable<TodoModel[]>;
@@ -17,7 +18,7 @@ export class TodoListComponent implements OnInit {
     newItemName!: string;
     // items: TodoModel[] = [];
 
-    constructor(private _store: Store) {}
+    constructor(public facade: TodoFacade) {}
 
     ngOnInit(): void {
         // this.items = [...new Array(10)].map((_, index) => ({
@@ -38,7 +39,8 @@ export class TodoListComponent implements OnInit {
     // };
 
     toggleItem(todo: TodoModel) {
-        this._store.dispatch(new ToggleItemAction(todo.id));
+        this.facade.toggleItem(todo);
+        // this._store.dispatch(new ToggleItemAction(todo.id));
         // const foundTodo = this.items.find((it) => todoItem.id === it.id);
         // if (foundTodo) {
         //     foundTodo.isDone = !foundTodo.isDone;
@@ -46,7 +48,8 @@ export class TodoListComponent implements OnInit {
     }
 
     addItem() {
-        this._store.dispatch(new AddItemAction(this.newItemName));
+        // this._store.dispatch(new AddItemAction(this.newItemName));
+        this.facade.addItem(this.newItemName);
         this.newItemName = '';
 
         // if (!this.newItemName) {
