@@ -1,28 +1,28 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxsModule } from '@ngxs/store';
 import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
-import { NxWelcomeComponent } from './nx-welcome.component';
 import { TodoModule } from './todo/todo.module';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
 import { TodoState } from './todo/todo.state';
-import { ItemState } from './todo/item.state';
+import { FeatureModule } from './feature/feature.module';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
-    declarations: [AppComponent, NxWelcomeComponent],
+    declarations: [AppComponent],
     imports: [
-        BrowserModule,
-        NgxsModule.forRoot([TodoState, ItemState], {
-            developmentMode: !environment.production
-        }),
+        BrowserAnimationsModule,
+        AppRoutingModule,
+        NgxsModule.forRoot([], { developmentMode: !environment.production }),
         NgxsReduxDevtoolsPluginModule.forRoot(),
         NgxsLoggerPluginModule.forRoot(),
-        TodoModule
+        TodoModule,
+        FeatureModule
     ],
     providers: [],
     bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

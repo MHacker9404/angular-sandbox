@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { State } from '@ngxs/store';
 
 @State<any>({
-    name: 'item',
+    name: 'feature',
     defaults: {}
 })
 @Injectable()
-export class ItemState {}
+export class FeatureState {}
