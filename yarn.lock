@@ -31,7 +31,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular-devkit/architect@npm:0.1402.4":
+"@angular-builders/custom-webpack@npm:^14.0.1":
+  version: 14.0.1
+  resolution: "@angular-builders/custom-webpack@npm:14.0.1"
+  dependencies:
+    "@angular-devkit/architect": ">=0.1400.0 < 0.1500.0"
+    "@angular-devkit/build-angular": ^14.0.0
+    "@angular-devkit/core": ^14.0.0
+    lodash: ^4.17.15
+    ts-node: ^10.0.0
+    tsconfig-paths: ^3.9.0
+    webpack-merge: ^5.7.3
+  peerDependencies:
+    "@angular/compiler-cli": ^14.0.0
+  checksum: 6cae568d4f010588f251a5acb9dbf66584e7850243eba3c5c14059b73b48310d1c98a4e1d8b1789bf6d7c1ab2dcf434d3252fdde6a668670c1730a21c56d4150
+  languageName: node
+  linkType: hard
+
+"@angular-devkit/architect@npm:0.1402.4, @angular-devkit/architect@npm:>=0.1400.0 < 0.1500.0":
   version: 0.1402.4
   resolution: "@angular-devkit/architect@npm:0.1402.4"
   dependencies:
@@ -41,7 +58,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular-devkit/build-angular@npm:~14.2.4":
+"@angular-devkit/build-angular@npm:^14.0.0, @angular-devkit/build-angular@npm:~14.2.4":
   version: 14.2.4
   resolution: "@angular-devkit/build-angular@npm:14.2.4"
   dependencies:
@@ -150,7 +167,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular-devkit/core@npm:14.2.4":
+"@angular-devkit/core@npm:14.2.4, @angular-devkit/core@npm:^14.0.0":
   version: 14.2.4
   resolution: "@angular-devkit/core@npm:14.2.4"
   dependencies:
@@ -7303,6 +7320,33 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dotenv-defaults@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "dotenv-defaults@npm:2.0.2"
+  dependencies:
+    dotenv: ^8.2.0
+  checksum: c005960bd048e2189c4799e729c41f362e415e6e0b54313d3f31e853a84b049bf770b25cb21c112c2805bb13a8376edc9de451fb514abf8546392d327c27f6e5
+  languageName: node
+  linkType: hard
+
+"dotenv-webpack@npm:^8.0.1":
+  version: 8.0.1
+  resolution: "dotenv-webpack@npm:8.0.1"
+  dependencies:
+    dotenv-defaults: ^2.0.2
+  peerDependencies:
+    webpack: ^4 || ^5
+  checksum: ee73eda78df90bcf7446763dfe5e518a2054ed6222783856912d2c6a255fdfc041854e125e036ff2603b06fb44f5234713fad5feecb1e66a54fe78a35a98fb87
+  languageName: node
+  linkType: hard
+
+"dotenv@npm:^8.2.0":
+  version: 8.6.0
+  resolution: "dotenv@npm:8.6.0"
+  checksum: 38e902c80b0666ab59e9310a3d24ed237029a7ce34d976796349765ac96b8d769f6df19090f1f471b77a25ca391971efde8a1ea63bb83111bd8bec8e5cc9b2cd
+  languageName: node
+  linkType: hard
+
 "dotenv@npm:~10.0.0":
   version: 10.0.0
   resolution: "dotenv@npm:10.0.0"
@@ -11187,7 +11231,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash@npm:^4.17.14, lodash@npm:^4.17.20, lodash@npm:^4.17.21":
+"lodash@npm:^4.17.14, lodash@npm:^4.17.15, lodash@npm:^4.17.20, lodash@npm:^4.17.21":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: eb835a2e51d381e561e508ce932ea50a8e5a68f4ebdd771ea240d3048244a8d13658acbd502cd4829768c56f2e16bdd4340b9ea141297d472517b83868e677f7
@@ -12020,6 +12064,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "nx-apps@workspace:."
   dependencies:
+    "@angular-builders/custom-webpack": ^14.0.1
     "@angular-devkit/build-angular": ~14.2.4
     "@angular-eslint/eslint-plugin": ~14.1.2
     "@angular-eslint/eslint-plugin-template": ~14.1.2
@@ -12058,6 +12103,7 @@ __metadata:
     babel-loader: ^8.2.5
     bootstrap: ^5.2.1
     cypress: ^10.9.0
+    dotenv-webpack: ^8.0.1
     eslint: ~8.24.0
     eslint-config-prettier: 8.5.0
     eslint-plugin-cypress: ^2.12.1
@@ -15376,7 +15422,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-node@npm:10.9.1":
+"ts-node@npm:10.9.1, ts-node@npm:^10.0.0":
   version: 10.9.1
   resolution: "ts-node@npm:10.9.1"
   dependencies:
@@ -15961,7 +16007,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"webpack-merge@npm:5.8.0, webpack-merge@npm:^5.8.0":
+"webpack-merge@npm:5.8.0, webpack-merge@npm:^5.7.3, webpack-merge@npm:^5.8.0":
   version: 5.8.0
   resolution: "webpack-merge@npm:5.8.0"
   dependencies:

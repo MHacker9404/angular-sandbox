@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
     title = 'profanis';
+    constructor() {
+        console.log(process.env['API_KEY']);
+    }
 }
