@@ -1,6 +1,8 @@
 {
     "version": 2,
     "projects": {
-        "gary-ngxs": "apps/gary-ngxs"
+        "gary-ngxs": "apps/gary-ngxs",
+        "profanis": "apps/profanis",
+        "profanis-e2e": "apps/profanis-e2e"
     }
 }
