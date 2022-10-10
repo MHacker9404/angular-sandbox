@@ -7,7 +7,9 @@
     "targets": {
         "build": {
             "executor": "@nrwl/angular:webpack-browser",
-            "outputs": ["{options.outputPath}"],
+            "outputs": [
+                "{options.outputPath}"
+            ],
             "options": {
                 "customWebpackConfig": {
                     "path": "apps/profanis/src/custom-webpack.config.ts"
@@ -22,7 +24,9 @@
                     "apps/profanis/src/favicon.ico",
                     "apps/profanis/src/assets"
                 ],
-                "styles": ["apps/profanis/src/styles.scss"],
+                "styles": [
+                    "apps/profanis/src/styles.scss"
+                ],
                 "scripts": []
             },
             "configurations": {
@@ -59,7 +63,7 @@
             "defaultConfiguration": "development"
         },
         "serve": {
-            "executor": "@nrwl/angular:webpack-dev-server",
+            "executor": "@nrwl/angular:webpack-server",
             "configurations": {
                 "production": {
                     "browserTarget": "profanis:build:production"
